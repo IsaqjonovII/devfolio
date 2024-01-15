@@ -1,0 +1,97 @@
+.header {
+  height: 80px;
+  padding: 0 calc(0.625rem + 1vw);
+  backdrop-filter: blur(8px) brightness(1) contrast(1) grayscale(0)
+    hue-rotate(0) invert(0) opacity(1) saturate(1) sepia(0);
+}
+.nav__logo {
+  width: 80px;
+  height: 100%;
+}
+.logo__img {
+  width: 100%;
+  height: 100%;
+  cursor: url("../../assets/cursor-pointer.png"), auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.nav__menu {
+  gap: calc(1rem + 1vw);
+  font-family: var(--font-sans);
+}
+.menu__link {
+  color: var(--pr-white);
+  opacity: 0.75;
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+  transition: 130ms ease-in;
+  &:hover {
+    color: var(--pr-white);
+    opacity: 1;
+  }
+  & span {
+    color: var(--pr-green);
+  }
+}
+.menu__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  border: none;
+  font-family: var(--font-sans);
+  background-color: transparent;
+}
+.menu__btn div {
+  letter-spacing: 2px;
+  background: var(--pr-btn);
+  border-radius: 8px;
+  color: var(--pr-white);
+  font-family: var(--font);
+  cursor: url("../../assets/cursor-pointer.png"), auto;
+  padding: 0.825rem 0.5rem;
+}
+
+.menu__btn::before {
+  content: "";
+  z-index: -1;
+  background-color: var(--pr-btn);
+  border: 2px solid var(--pr-btn);
+  border-radius: 8px;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: 1s;
+  opacity: 0.2;
+  cursor: url("../../assets/cursor-pointer.png"), auto;
+}
+.menu__btn:hover {
+  cursor: pointer;
+}
+.menu__btn:hover::before {
+  transform: rotate(0deg);
+  transition: 250ms;
+  opacity: 1;
+  background-color: var(--pr-btn);
+}
+.menu__btn svg {
+  transform: translateX(-200%);
+  transition: 250ms;
+  width: 0;
+  opacity: 0;
+  fill: var(--pr-green);
+}
+.menu__btn:hover svg {
+  width: 22px;
+  transform: translateX(0%);
+  cursor: url("../../assets/cursor-pointer.png"), auto;
+  opacity: 1;
+}
+@media only screen and (max-width: 1024px) {
+  .nav__menu {
+    display: none !important;
+  }
+}

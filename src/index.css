@@ -16,6 +16,7 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  
 }
 .page__label {
   font-size: calc(1.4rem + 3vw);

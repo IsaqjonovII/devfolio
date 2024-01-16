@@ -1,33 +1,25 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import c from "./style.module.css";
 import { routes } from "routes";
+import { myResume } from "assets";
+import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
-import { myLogo, myResume, logoGif } from "assets";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
-  const [imgSrc, setImgSrc] = useState(myLogo);
+
   return (
     <div className={`${c.header} flex`}>
-      <motion.div
-        className={c.nav__logo}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <Link to="/">
-          <img
-            className={c.logo__img}
-            width={80}
-            height={80}
-            src={imgSrc}
-            alt="Ilhomjon Isaqjonov"
-            onMouseOver={() => setImgSrc(logoGif)}
-            onMouseOut={() => setImgSrc(myLogo)}
-          />
-        </Link>
-      </motion.div>
+      <Link to="/">
+        <motion.div
+          className={c.nav__logo}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <span className={c.code}>{"<"}</span>Ilhomjon{" "}
+          <span className={c.code}>{" />"}</span>
+        </motion.div>
+      </Link>
       <nav>
         <ul className={`${c.nav__menu} flex`}>
           {routes.map(({ id, path, title }) => (

@@ -1,9 +1,9 @@
 import { node, string } from "prop-types";
 import "./style.css";
 
-const CustomBtn = ({ children }) => {
+const CustomBtn = ({ children, className }) => {
   return (
-    <button className="btn__shine">
+    <button className={`btn__shine ${className}`}>
       <span>{children}</span>
     </button>
   );
@@ -12,4 +12,5 @@ const CustomBtn = ({ children }) => {
 export default CustomBtn;
 CustomBtn.propTypes = {
   children: node || string,
+  className: string,
 };

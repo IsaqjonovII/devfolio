@@ -2,47 +2,66 @@ import { routes } from "routes";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import c from "./style.module.css";
+import { myResume } from "assets";
 
 const Sidebar = () => {
+  const sideVariants = {
+    closed: {
+      transition: {
+        staggerChildren: 0.01,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+  };
+  const itemVariants = {
+    closed: {
+      opacity: 0,
+    },
+    open: { opacity: 1 },
+  };
   return (
     <motion.aside
       className={c.sidebar__wrp}
-      initial={{
-        opacity: 0,
-        width: 0,
-        x: 0,
-      }}
+      initial={{ width: 0 }}
       animate={{
-        opacity: 1,
-        width: "100%",
-        x: 1,
+        width: "80%",
+        maxWidth: "600px",
+        transition: {
+          duration: 0.3,
+          type: "spring",
+        },
       }}
-      transition={{
-        type: "spring",
-        duration: 0.5,
+      exit={{
+        width: 0,
+        transition: { delay: 0.3, type: "just" },
       }}
     >
-      <ul className={c.sidebar__links}>
+      <motion.ul
+        className={c.sidebar__links}
+        initial="closed"
+        animate="open"
+        exit="closed"
+        variants={sideVariants}
+      >
         {routes.map(({ id, path, title }) => (
-          <motion.li
-            key={id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: id * 0.15 }}
-          >
+          <motion.li key={id} variants={itemVariants}>
             <Link className={c.sidebar__link} to={path}>
               {title}
             </Link>
           </motion.li>
         ))}
-        <motion.li
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          <button className={c.menu__btn}>Resume / CV</button>
+        <motion.li variants={itemVariants}>
+          <a href={myResume} download={true}>
+            <button className={c.menu__btn}>Resume / CV</button>
+          </a>
         </motion.li>
-      </ul>
+      </motion.ul>
     </motion.aside>
   );
 };

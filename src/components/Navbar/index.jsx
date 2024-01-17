@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import { bool, func } from "prop-types";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { routes } from "routes";
@@ -6,11 +6,10 @@ import { myResume } from "assets";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
 
-const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
-
+const Navbar = ({ cycle, cycleOpen }) => {
   return (
     <div className={`${c.header} flex`}>
-      <Link to="/">
+      <Link to="/" onClick={() => cycleOpen(!cycle)}>
         <motion.div
           className={c.nav__logo}
           initial={{ opacity: 0 }}
@@ -70,17 +69,14 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             </a>
           </motion.li>
         </ul>
-        <BarsIcon
-          isSidebarOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
-        />
+        <BarsIcon isSidebarOpen={cycle} setIsSidebarOpen={cycleOpen} />
       </nav>
     </div>
   );
 };
 
 Navbar.propTypes = {
-  isSidebarOpen: PropTypes.bool,
-  setIsSidebarOpen: PropTypes.func.isRequired,
+  cycle: bool,
+  cycleOpen: func.isRequired,
 };
 export default Navbar;

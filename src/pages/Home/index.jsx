@@ -16,10 +16,6 @@ const Home = () => {
         >
           Hello, I&apos;m <span className={c.subtitle__label}>Ilhomjon</span>,
         </motion.h1>
-
-        <br />
-        <br />
-
         <motion.h1
           className={c.content__title}
           initial={{ opacity: 0 }}
@@ -37,7 +33,7 @@ const Home = () => {
           transition={{ delay: 0.44 }}
         >
           <Link to="mailto:isaqjonoviii@gmail.com">
-            <CustomBtn>Say Hi</CustomBtn>
+            <CustomBtn className="main__btn">Say Hi</CustomBtn>
           </Link>
         </motion.div>
       </div>

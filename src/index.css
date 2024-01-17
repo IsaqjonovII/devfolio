@@ -40,11 +40,11 @@ a {
 }
 a,
 button {
-  cursor: url("assets/cursor-pointer.png"), auto;
+  cursor: url("assets/cursor-pointer.png"), auto !important;
 }
 body {
   background-color: var(--pr-bg);
-  cursor: url("assets/cursor-default.png"), auto;
+  cursor: url("assets/cursor-default.png"), auto !important;
 }
 h1,
 h2,
@@ -75,9 +75,10 @@ h3 {
   background-color: var(--pr-btn);
 }
 ::selection {
-  background-color: transparent;
-  color: inherit;
-  text-shadow: 0 3px 0px var(--pr-btn) 0 3px 0 var(--pr-btn);
+  background-color: var(--pr-btn-tr);
+  color: var(--pr-green);
+  text-shadow: 0 3px 0px var(--pr-bg), 0 5px 0px var(--pr-bg),
+    0 7px 0px var(--pr-bg);
 }
 
 @media (prefers-color-scheme: light) {

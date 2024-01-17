@@ -32,12 +32,12 @@
   margin: calc(1.5rem + 1vh) 0;
 }
 .main__img {
-  text-align: center;
+  text-align: right;
   position: absolute;
-  right: 0;
+  right: 50px;
   width: 100%;
   max-width: 680px;
-  z-index: 0;
+  z-index: 1;
   & img {
     width: 70%;
     object-fit: cover;
@@ -57,15 +57,11 @@
   }
 }
 @media only screen and (max-width: 900px) {
-  .main {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .main__content {
-    grid-column: 1 / 4;
-    z-index: 3;
-  }
   .main__img {
-    z-index: 1;
+    display: none;
+  }
+  .main {
+    grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 768px) {

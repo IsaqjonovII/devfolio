@@ -4,12 +4,16 @@ import jsconfigPaths from "vite-jsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
-  base: "./",
+  optimizeDeps: {
+    exclude: ["js-big-decimal"],
+  },
+  resolve: { alias: [{ find: "@", replacement: "/src" }] },
+  base: "/",
   build: {
     target: "modules",
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: true,
-    minify: "esbuild"
+    minify: "esbuild",
   },
 });

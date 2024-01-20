@@ -10,7 +10,7 @@ const App = () => {
   const [cycle, cycleOpen] = useCycle(false, true);
   const { pathname } = useLocation();
   useEffect(() => {
-    cycleOpen(!cycle);
+    cycleOpen(false);
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {

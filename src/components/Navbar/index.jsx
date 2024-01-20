@@ -6,17 +6,19 @@ import { myResume } from "assets";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
 
-const Navbar = ({ cycle, cycleOpen }) => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
     <div className={`${c.header} flex`}>
-      <motion.div
-        className={c.nav__logo}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <span className={c.code}>{"<"}</span>Ilhomjon{" "}
-        <span className={c.code}>{" />"}</span>
-      </motion.div>
+      <Link to="/">
+        <motion.div
+          className={c.nav__logo}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <span className={c.code}>{"<"}</span>Ilhomjon{" "}
+          <span className={c.code}>{" />"}</span>
+        </motion.div>
+      </Link>
       <nav>
         <ul className={`${c.nav__menu} flex`}>
           {routes.map(({ id, path, title }) => (
@@ -67,14 +69,17 @@ const Navbar = ({ cycle, cycleOpen }) => {
             </a>
           </motion.li>
         </ul>
-        <BarsIcon isSidebarOpen={cycle} setIsSidebarOpen={cycleOpen} />
+        <BarsIcon
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
       </nav>
     </div>
   );
 };
 
 Navbar.propTypes = {
-  cycle: bool,
-  cycleOpen: func.isRequired,
+  isSidebarOpen: bool,
+  setIsSidebarOpen: func.isRequired,
 };
 export default Navbar;

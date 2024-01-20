@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { AnimatePresence, useCycle } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import Sidebar from "components/Sidebar";
@@ -7,21 +7,24 @@ import Navbar from "components/Navbar";
 import { routes } from "routes";
 
 const App = () => {
-  const [cycle, cycleOpen] = useCycle(false, true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
-    cycleOpen(false);
+    setIsSidebarOpen(false);
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
-    document.body.style.overflowY = cycle ? "hidden" : "auto";
-  }, [cycle]);
+    document.body.style.overflowY = isSidebarOpen ? "hidden" : "auto";
+  }, [isSidebarOpen]);
 
   return (
     <div className="app">
       <header className="header__container">
-        <Navbar cycle={cycle} cycleOpen={cycleOpen} />
-        <AnimatePresence>{cycle && <Sidebar />}</AnimatePresence>
+        <Navbar
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
+        <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
       </header>
       <AnimatePresence>
         <Routes>

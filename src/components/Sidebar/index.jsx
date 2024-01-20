@@ -49,6 +49,11 @@ const Sidebar = () => {
         exit="closed"
         variants={sideVariants}
       >
+        <motion.li variants={itemVariants}>
+          <Link className={c.sidebar__link} to="/">
+            Home
+          </Link>
+        </motion.li>
         {routes.map(({ id, path, title }) => (
           <motion.li key={id} variants={itemVariants}>
             <Link className={c.sidebar__link} to={path}>

@@ -10,9 +10,9 @@ const App = () => {
   const [cycle, cycleOpen] = useCycle(false, true);
   const { pathname } = useLocation();
   useEffect(() => {
-    cycleOpen(false);
+    cycleOpen(!cycle);
     window.scrollTo(0, 0);
-  }, [pathname, cycleOpen]);
+  }, [pathname]);
   useEffect(() => {
     document.body.style.overflowY = cycle ? "hidden" : "auto";
   }, [cycle]);

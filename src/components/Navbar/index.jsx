@@ -9,16 +9,14 @@ import BarsIcon from "components/BarsIcon";
 const Navbar = ({ cycle, cycleOpen }) => {
   return (
     <div className={`${c.header} flex`}>
-      <Link to="/" onClick={() => cycleOpen(!cycle)}>
-        <motion.div
-          className={c.nav__logo}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <span className={c.code}>{"<"}</span>Ilhomjon{" "}
-          <span className={c.code}>{" />"}</span>
-        </motion.div>
-      </Link>
+      <motion.div
+        className={c.nav__logo}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <span className={c.code}>{"<"}</span>Ilhomjon{" "}
+        <span className={c.code}>{" />"}</span>
+      </motion.div>
       <nav>
         <ul className={`${c.nav__menu} flex`}>
           {routes.map(({ id, path, title }) => (

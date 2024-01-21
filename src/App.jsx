@@ -7,6 +7,7 @@ import Navbar from "components/Navbar";
 import { routes } from "routes";
 
 const App = () => {
+  const [theme, setTheme] = useState("dark-theme");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -16,9 +17,12 @@ const App = () => {
   useEffect(() => {
     document.body.style.overflowY = isSidebarOpen ? "hidden" : "auto";
   }, [isSidebarOpen]);
-
+  useEffect(() => {
+    document.body.className = "";
+    document.body.className = theme;
+  }, [theme]);
   return (
-    <div className="app">
+    <div className={"app"}>
       <header className="header__container">
         <Navbar
           isSidebarOpen={isSidebarOpen}

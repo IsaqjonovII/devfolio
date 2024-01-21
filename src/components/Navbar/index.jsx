@@ -1,5 +1,5 @@
 import { bool, func } from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { routes } from "routes";
 import { myResume } from "assets";
@@ -28,9 +28,14 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: id * 0.1 }}
             >
-              <Link className={c.menu__link} to={path}>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? `${c.menu__link} ${c.active__link}` : c.menu__link
+                }
+                to={path}
+              >
                 <span>{id}. </span> {title}
-              </Link>
+              </NavLink>
             </motion.li>
           ))}
           <motion.li

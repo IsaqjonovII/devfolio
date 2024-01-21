@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: calc(93svh - 80px);
-  background-color: var(--pr-bg);
+  background: var(--primary-bg);
   padding: 80px calc(1rem + 1vw);
   border-top: 1px solid var(--pr-btn-tr);
   backdrop-filter: blur(8px) brightness(1) contrast(1) grayscale(0)
@@ -14,7 +14,7 @@
 .sidebar__link {
   display: block;
   font-family: var(--font-sans);
-  color: var(--pr-white);
+  color: var(--primary-text);
   line-height: 1.5;
   margin: 10px 0;
   font-size: 1.5rem;
@@ -22,12 +22,12 @@
 .menu__btn {
   font-family: var(--font-sans);
   padding: 10px 25px;
-  background-color: var(--pr-btn);
+  background: var(--second-bg);
   border: 1px solid transparent;
   border-radius: 0.425rem;
   cursor: pointer;
   margin-top: 20px;
-  color: var(--pr-white);
+  color: var(--primary-text);
 }
 @media only screen and (min-width: 1024px) {
   .sidebar__wrp {

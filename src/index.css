@@ -8,6 +8,7 @@
   --light-brown: #918b7d;
   --light-brown-1: #c8c3b3;
   --pr-btn-tr: #1f5e6b61;
+  --light-brown-tr: #c8c3b390;
   --font-logo: "Rubik Doodle Shadow", system-ui;
   --font-sans: "Varela", sans-serif;
   --font: "Viga", sans-serif;
@@ -18,9 +19,25 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+.dark-theme,
+body {
+  --primary-text: var(--pr-white);
+  --primary-green: var(--pr-green);
+  --primary-bg: var(--pr-bg);
+  --second-bg: var(--pr-btn);
+  --second-bg-tr: var(--pr-btn-tr);
+}
+.light-theme,
+body {
+  --primary-text: var(--light-text);
+  --primary-green: var(--light-brown);
+  --primary-bg: var(--light-bg);
+  --second-bg: var(--light-brown-1);
+  --second-bg-tr: var(--light-brown-tr);
+}
 .page__label {
   font-size: calc(1.4rem + 3vw);
-  color: var(--pr-green);
+  color: var(--primary-green);
   text-align: center;
   opacity: 0.7;
   color: transparent;
@@ -42,14 +59,17 @@ a,
 button {
   cursor: url("assets/cursor-pointer.png"), auto !important;
 }
+.app {
+  background: var(--primary-bg);
+}
 body {
-  background-color: var(--pr-bg);
+  background: var(--primary-bg);
   cursor: url("assets/cursor-default.png"), auto !important;
 }
 h1,
 h2,
 h3 {
-  color: var(--pr-white);
+  color: var(--primary-text);
   font-family: var(--font-sans);
   font-weight: 400 !important;
 }
@@ -68,37 +88,31 @@ h3 {
 ::-webkit-scrollbar {
   width: 3px;
   cursor: url("assets/cursor-pointer.png"), auto;
-  background-color: transparent;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   width: 100%;
-  background-color: var(--pr-btn);
+  background: var(--second-bg);
 }
 ::selection {
-  background-color: var(--pr-btn-tr);
-  color: var(--pr-green);
-  text-shadow: 0 3px 0px var(--pr-bg), 0 5px 0px var(--pr-bg),
-    0 7px 0px var(--pr-bg);
+  background: var(--second-bg-tr);
+  color: var(--primary-green);
+  text-shadow: 0 2px 0px var(--pr-bg), 0 3px 0px var(--pr-bg);
 }
-
+.page__title {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-family: var(--font);
+}
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--light-text);
+    background: var(--light-brown);
   }
   a:hover {
-    color: #1ed95c;
+    color: var(--primary-green);
   }
   button {
-    background-color: #1ed95c80;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .code {
-    font-size: 1rem;
-    margin: 0;
-  }
-  .page__label {
-    text-shadow: 3px 3px 0 var(--pr-green), -3px 3px 0 var(--pr-green);
+    background: var(--second-bg-tr);
   }
 }

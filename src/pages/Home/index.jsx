@@ -14,7 +14,8 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.36 }}
         >
-          Hello, I&apos;m <span className={c.subtitle__label}>Ilhomjon</span>,
+          Hi there, I&apos;m <span className={c.subtitle__label}>Ilhomjon</span>{" "}
+          Isaqjonov,
         </motion.h1>
         <motion.h1
           className={c.content__title}
@@ -32,8 +33,8 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.44 }}
         >
-          <Link to="mailto:isaqjonoviii@gmail.com">
-            <CustomBtn className="main__btn">Say Hi</CustomBtn>
+          <Link to="mailto:isaqjonoviii@gmail.com?subject=Work together&body=Let's work together!">
+            <CustomBtn className="main__btn">Let's work together</CustomBtn>
           </Link>
         </motion.div>
       </div>

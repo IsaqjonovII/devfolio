@@ -11,11 +11,12 @@
 .content__subtitle,
 .content__title {
   color: var(--primary-text);
-  font-size: calc(0.625rem + 1vw);
+  font-size: var(--font-h5);
   line-height: 1.3;
 }
+
 .title__label {
-  font-size: calc(3rem + 1vw);
+  font-size: var(--font-h2-display);
   display: block;
   color: var(--primary-green);
   font-family: var(--font);
@@ -49,6 +50,13 @@
 }
 .content__title {
   margin: calc(1.5rem + 1vh) 0;
+}
+.subtitle {
+  font-size: var(--font-h5);
+  color: var(--primary-text);
+  opacity: 0.8 !important;
+  font-family: var(--font-sans);
+  margin-bottom: calc(1.5rem + 1vh);
 }
 .main__img {
   text-align: right;
@@ -92,7 +100,6 @@
     text-align: center;
   }
   .title__label {
-    font-size: calc(2.2rem + 1vw);
     background: linear-gradient(
       to right,
       var(--second-bg) 20%,
@@ -109,10 +116,6 @@
   .main__img {
     display: none;
   }
-  .content__subtitle,
-  .content__title {
-    font-size: calc(1.15rem + 1vw);
-  }
 }
 @media only screen and (max-width: 550px) {
   .main__content {
@@ -120,14 +123,6 @@
   }
   .content__title {
     margin: 1.25rem 0;
-  }
-}
-@media only screen and (max-width: 420px) {
-  .content__title {
-    font-size: calc(0.925rem + 1vw);
-  }
-  .title__label {
-    font-size: calc(1.6rem + 1vw);
   }
 }
 @keyframes shine {

@@ -1,56 +1,56 @@
 import { motion } from "framer-motion";
 import c from "./style.module.css";
 import { Link } from "react-router-dom";
+import { framerVariants, itemVariants } from "utils";
 
 const Intro = () => {
   return (
     <main className={c.intro}>
       <motion.section
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
         exit={{ opacity: 0 }}
       >
-        <h1 className="page__title">It&apos;s about me</h1>
+        <h1 className={c.intro__title}>I&apos;m Ilhomjon</h1>
       </motion.section>
-      <motion.section
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0 }}
-      >
-        <h3 className={c.intro__text}>
-          Hey there! Ilhomjon here, living and coding in the vibrant city of
-          Tashkent, Uzbekistan. I'm a web developer with a passion for crafting
-          user-friendly interfaces that tell a story. Excited to share this
-          journey with you—let's create some digital magic together!
-        </h3>
-        <h3 className={c.intro__text}>
-          I've been working as a frontend developer for over 2 years. During
-          this time, I've had the privilege of contributing to impactful
-          projects where I honed my skills in TypeScript, Javascript, React,
-          Nodejs and Fastify.
-        </h3>
-        <h3 className={c.intro__text}>
-          These days, I focus on working on my side project Motoshop.uz where
-          people can buy or sell their bikes.
-        </h3>
-        <h3 className={c.intro__text}>
-          I take pleasure in transforming intricate challenges into elegant
-          solutions through code. My interest in web development arises from a
-          goal to design not only visually appealing websites but also ensure a
-          smooth user experience.
-        </h3>
-        <h3 className={c.intro__text}>
-          In the future, I aim to enhance my proficiency in frontend development
-          and explore other IT domains like AI, Cybersecurity, and Mobile
-          development. I am dedicated to staying updated on industry trends and
-          consistently improving my skills.
-        </h3>
-        <h3 className={c.intro__text}>
-          Beyond coding, I find joy in the roar of a motorbike and the thrill of
-          travel. Join me as I navigate both the digital and physical landscapes
-          with equal enthusiasm!
-        </h3>
-      </motion.section>
+      <div className="flex">
+        <motion.section
+          className={c.text__wrp}
+          variants={framerVariants}
+          initial="closed"
+          animate="open"
+          exit="closed"
+        >
+          <motion.h3 variants={itemVariants} className={c.intro__text}>
+            I've been working as a frontend developer for over 2 years. During
+            this time, I've had the privilege of contributing to impactful
+            projects where I honed my skills in TypeScript, Javascript, React,
+            Nodejs and Fastify.
+          </motion.h3>
+          <motion.h3 variants={itemVariants} className={c.intro__text}>
+            These days, I focus on working on my side project Motoshop.uz where
+            people can buy or sell their bikes.
+          </motion.h3>
+          <motion.h3 variants={itemVariants} className={c.intro__text}>
+            I take pleasure in transforming intricate challenges into elegant
+            solutions through code. My interest in web development arises from a
+            goal to design not only visually appealing websites but also ensure
+            a smooth user experience.
+          </motion.h3>
+          <motion.h3 variants={itemVariants} className={c.intro__text}>
+            In the future, I aim to enhance my proficiency in frontend
+            development and explore other IT domains like AI, Cybersecurity, and
+            Mobile development. I am dedicated to staying updated on industry
+            trends and consistently improving my skills.
+          </motion.h3>
+          <motion.h3 variants={itemVariants} className={c.intro__text}>
+            Beyond coding, I find joy in the roar of a motorbike and the thrill
+            of travel. Join me as I navigate both the digital and physical
+            landscapes with equal enthusiasm!
+          </motion.h3>
+        </motion.section>
+      </div>
 
       <div className="navigate__link">
         <Link to="/portfolio">

@@ -12,12 +12,23 @@
   --font-logo: "Rubik Doodle Shadow", system-ui;
   --font-sans: "Varela", sans-serif;
   --font: "Viga", sans-serif;
+  --font-h1: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
+  --font-h2: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
+  --font-h3: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
+  --font-h4: clamp(1.375rem, 1.1837rem + 0.8163vw, 1.6rem);
+  --font-h5: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
+  --font-h6: clamp(1rem, 0.9617rem + 0.1633vw, 1.125rem);
+  --font-body: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
+  --font-link: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
+  --font-mini: clamp(0.875rem, 0.8367rem + 0.1633vw, 1rem);
+  --font-h2-display: clamp(1.875rem, 1.41rem + 2.449vw, 3.95rem);
 }
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 .dark-theme,
 body {
@@ -35,25 +46,30 @@ body {
   --second-bg: var(--light-brown-1);
   --second-bg-tr: var(--light-brown-tr);
 }
-.page__label {
-  font-size: calc(1.4rem + 3vw);
+.page__title {
+  font-size: var(--font-h2-display);
   color: var(--primary-green);
   text-align: center;
   opacity: 0.7;
   color: transparent;
   padding: 0 15px;
   text-transform: uppercase;
-  -webkit-text-stroke: var(--pr-green) 1px;
-  text-shadow: 6px 6px 0 var(--pr-green), -6px 6px 0 var(--pr-green);
+  -webkit-text-stroke: var(--pr-white) 1px;
+  text-shadow: 3px 3px 0 var(--pr-green), -3px 3px 0 var(--pr-green);
 }
 ul,
 li {
   list-style-type: none;
+  color: var(--primary-text);
 }
 a {
   text-decoration: none;
   outline: var(--pr-green);
-  color: inherit;
+  color: var(--primary-green);
+  font-family: var(--font);
+}
+svg {
+  vertical-align: middle;
 }
 a,
 button {
@@ -73,7 +89,12 @@ h3 {
   font-family: var(--font-sans);
   font-weight: 400 !important;
 }
-
+.navigate__link {
+  color: var(--primary-green);
+  font-family: var(--font);
+  font-size: var(--font-link);
+  text-align: center;
+}
 .header__container {
   position: sticky;
   top: 0;
@@ -86,9 +107,10 @@ h3 {
   justify-content: space-between;
 }
 ::-webkit-scrollbar {
-  width: 3px;
-  cursor: url("assets/cursor-pointer.png"), auto;
+  width: 10px;
   background: transparent;
+  border-left: 1px solid var(--second-bg-tr);
+  cursor: url("assets/cursor-pointer.png"), auto;
 }
 ::-webkit-scrollbar-thumb {
   width: 100%;
@@ -98,11 +120,6 @@ h3 {
   background: var(--second-bg-tr);
   color: var(--primary-green);
   text-shadow: 0 2px 0px var(--pr-bg), 0 3px 0px var(--pr-bg);
-}
-.page__title {
-  font-size: 2.8rem;
-  text-transform: uppercase;
-  font-family: var(--font);
 }
 @media (prefers-color-scheme: light) {
   :root {

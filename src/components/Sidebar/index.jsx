@@ -3,28 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import c from "./style.module.css";
 import { myResume } from "assets";
+import { framerVariants, itemVariants } from "utils";
 
 const Sidebar = () => {
-  const sideVariants = {
-    closed: {
-      transition: {
-        staggerChildren: 0.01,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: 1,
-      },
-    },
-  };
-  const itemVariants = {
-    closed: {
-      opacity: 0,
-    },
-    open: { opacity: 1 },
-  };
   return (
     <motion.aside
       className={c.sidebar__wrp}
@@ -47,7 +28,7 @@ const Sidebar = () => {
         initial="closed"
         animate="open"
         exit="closed"
-        variants={sideVariants}
+        variants={framerVariants}
       >
         <motion.li variants={itemVariants}>
           <Link className={c.sidebar__link} to="/">

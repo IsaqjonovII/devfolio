@@ -26,7 +26,16 @@ const Home = () => {
           <span className={c.title__label}>Frontend Enthusiast</span> dedicated
           to crafting engaging web applications and websites.
         </motion.h1>
-
+        <motion.p
+          className={c.subtitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          As a web developer with a passion for creating user-friendly
+          interfaces that tell a compelling story, I'm excited to share this
+          journey with you — let's create some digital magic together!
+        </motion.p>
         <motion.div
           style={{ marginTop: 15 }}
           initial={{ opacity: 0 }}
@@ -34,7 +43,7 @@ const Home = () => {
           transition={{ delay: 0.44 }}
         >
           <Link to="mailto:isaqjonoviii@gmail.com?subject=Work together&body=Let's work together!">
-            <CustomBtn className="main__btn">Let's work together</CustomBtn>
+            <CustomBtn className="main__btn">Let's work together </CustomBtn>
           </Link>
         </motion.div>
       </div>

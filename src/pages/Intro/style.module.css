@@ -1,3 +1,22 @@
 .intro {
-    padding: 4rem 2rem;
+  padding: 4rem 2rem;
+}
+.text__wrp {
+  max-width: 730px;
+  margin: auto;
+}
+.intro__text {
+  margin: 30px 0;
+  font-size: var(--font-h4);
+  color: var(--primary-text);
+}
+.intro__title {
+    font-size: var(--font-h2-display);
+    text-align: center;
+    font-weight: 900 !important;
+    font-family: var(--font);
+    color: var(--primary-green);
+}
+.intro__subtitle {
+    font-size: var(--font-h2);
 }

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import c from "./style.module.css";
 import { Link } from "react-router-dom";
-import { framerVariants, itemVariants } from "utils";
+import { framerVariants, itemVariants, socialLinks } from "utils";
 import { coder } from "assets";
 
 const Intro = () => {
@@ -24,28 +24,53 @@ const Intro = () => {
             animate="open"
             exit="closed"
           >
+            <motion.h2 className={c.section__title} variants={itemVariants}>
+              Professional Journey
+            </motion.h2>
             <motion.h3 variants={itemVariants} className={c.intro__text}>
               I&apos;ve been working as a frontend developer for over 2 years.
               During this time, I&apos;ve had the privilege of contributing to
               impactful projects where I honed my skills in TypeScript,
               Javascript, React, Nodejs and Fastify.
             </motion.h3>
+            <motion.h2 className={c.section__title} variants={itemVariants}>
+              Currently
+            </motion.h2>
             <motion.h3 variants={itemVariants} className={c.intro__text}>
-              These days, I focus on working on my side project Motoshop.uz
-              where people can buy or sell their bikes.
+              These days, I&apos;m dedicated to working on my side project,{" "}
+              <a
+                href="https://motoshop.uz"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                motoshop.uz
+              </a>{" "}
+              it&apos;s a platform where people can buy or sell their bikes.
+              Additionally, I&apos;m involved in guiding and inspiring aspiring
+              developers in a dynamic learning environment, with a focus on
+              HTML, CSS, and JavaScript.
             </motion.h3>
+            <motion.h2 className={c.section__title} variants={itemVariants}>
+              Passion and Motivation
+            </motion.h2>
             <motion.h3 variants={itemVariants} className={c.intro__text}>
               I take pleasure in transforming intricate challenges into elegant
               solutions through code. My interest in web development arises from
               a goal to design not only visually appealing websites but also
               ensure a smooth user experience.
             </motion.h3>
+            <motion.h2 className={c.section__title} variants={itemVariants}>
+              Future Goals
+            </motion.h2>
             <motion.h3 variants={itemVariants} className={c.intro__text}>
               In the future, I aim to enhance my proficiency in frontend
               development and explore other IT domains like AI, Cybersecurity,
               and Mobile development. I am dedicated to staying updated on
               industry trends and consistently improving my skills.
             </motion.h3>
+            <motion.h2 className={c.section__title} variants={itemVariants}>
+              Fun Fact
+            </motion.h2>
             <motion.h3 variants={itemVariants} className={c.intro__text}>
               Beyond coding, I find joy in the roar of a motorbike and the
               thrill of travel. Join me as I navigate both the digital and
@@ -83,7 +108,18 @@ const Intro = () => {
           </motion.section>
           <motion.section>
             <img className={c.intro__img} src={coder} alt="" />
-            <div className={c.social__links}></div>
+            <div className={c.social__links}>
+              {socialLinks.map(({ key, link, label }) => (
+                <Link
+                  key={key}
+                  to={link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div className={c.social__link}> {label} </div>
+                </Link>
+              ))}
+            </div>
           </motion.section>
         </div>
       </div>

@@ -110,7 +110,7 @@
   opacity: 1;
 }
 .menu__link.active__link {
-  --bg-size: 400%;
+  --dark-bg-size: 400%;
   color: var(--primary-text);
   transform: scale(1.2);
   font-weight: 600;

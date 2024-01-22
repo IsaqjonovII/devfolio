@@ -1,14 +1,14 @@
 :root {
-  --pr-green: #6bde3b;
-  --pr-white: #e9efe6;
-  --pr-bg: #1c292f;
-  --pr-btn: #1f5e6b;
+  --green: #6bde3b;
+  --white: #e9efe6;
+  --dark-bg: #1c292f;
+  --dark-btn: #1f5e6b;
   --light-bg: #dad3c1;
   --light-text: #1d1b17;
-  --light-brown: #918b7d;
-  --light-brown-1: #c8c3b3;
-  --pr-btn-tr: #1f5e6b61;
-  --light-brown-tr: #c8c3b390;
+  --light-btn: #918b7d;
+  --light-btn-1: #c8c3b3;
+  --dark-btn-tr: #1f5e6b61;
+  --light-btn-tr: #c8c3b390;
   --font-sans: "Varela", sans-serif;
   --font: "Viga", sans-serif;
   --font-h1: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
@@ -31,19 +31,19 @@
 }
 .dark,
 body {
-  --primary-text: var(--pr-white);
-  --primary-green: var(--pr-green);
-  --primary-bg: var(--pr-bg);
-  --second-bg: var(--pr-btn);
-  --second-bg-tr: var(--pr-btn-tr);
+  --primary-text: var(--white);
+  --primary-green: var(--green);
+  --primary-bg: var(--dark-bg);
+  --second-bg: var(--dark-btn);
+  --second-bg-tr: var(--dark-btn-tr);
 }
 .light,
 body {
   --primary-text: var(--light-text);
-  --primary-green: var(--light-brown);
+  --primary-green: var(--light-btn);
   --primary-bg: var(--light-bg);
-  --second-bg: var(--light-brown-1);
-  --second-bg-tr: var(--light-brown-tr);
+  --second-bg: var(--light-btn);
+  --second-bg-tr: var(--light-btn-tr);
 }
 .page__title {
   font-size: var(--font-h2-display);
@@ -53,8 +53,8 @@ body {
   color: transparent;
   padding: 0 15px;
   text-transform: uppercase;
-  -webkit-text-stroke: var(--pr-white) 1px;
-  text-shadow: 3px 3px 0 var(--pr-green), -3px 3px 0 var(--pr-green);
+  -webkit-text-stroke: var(--white) 1px;
+  text-shadow: 3px 3px 0 var(--green), -3px 3px 0 var(--green);
 }
 .container {
   max-width: 1550px;
@@ -67,7 +67,7 @@ li {
 }
 a {
   text-decoration: none;
-  outline: var(--pr-green);
+  outline: var(--green);
   color: inherit;
 }
 svg {
@@ -131,7 +131,7 @@ h3 {
 ::selection {
   background: var(--second-bg-tr);
   color: var(--primary-green);
-  text-shadow: 0 2px 0px var(--pr-bg), 0 3px 0px var(--pr-bg);
+  text-shadow: 0 2px 0px var(--dark-bg), 0 3px 0px var(--dark-bg);
 }
 
 @media (prefers-color-scheme: light) {

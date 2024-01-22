@@ -106,6 +106,7 @@ h3 {
   color: var(--primary-green);
   font-family: var(--font);
   font-size: var(--font-link);
+  margin-top: 20px;
 }
 .header__container {
   position: sticky;

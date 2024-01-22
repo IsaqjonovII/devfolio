@@ -31,7 +31,7 @@
 }
 .section__wrp {
   margin-top: calc(1.5rem + 1vh);
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 .social__links {
   display: grid;

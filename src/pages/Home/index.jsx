@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import c from "./style.module.css";
-import { coder } from "assets";
-import CustomBtn from "components/Button";
 import { Link } from "react-router-dom";
+import { coder } from "assets";
+import c from "./style.module.css";
+import CustomBtn from "components/Button";
 
 const Home = () => {
   return (
@@ -23,8 +23,8 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <span className={c.title__label}>Frontend Enthusiast</span> <br /> dedicated
-          to crafting engaging web applications and websites.
+          <span className={c.title__label}>Frontend Enthusiast</span> <br />{" "}
+          dedicated to crafting engaging web applications and websites.
         </motion.h1>
         <motion.p
           className={c.subtitle}

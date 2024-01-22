@@ -23,27 +23,29 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <span className={c.title__label}>Frontend Enthusiast</span> dedicated
+          <span className={c.title__label}>Frontend Enthusiast</span> <br /> dedicated
           to crafting engaging web applications and websites.
         </motion.h1>
         <motion.p
           className={c.subtitle}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.42 }}
         >
           As a web developer with a passion for creating user-friendly
-          interfaces that tell a compelling story, I'm excited to share this
-          journey with you — let's create some digital magic together!
+          interfaces that tell a compelling story, I&apos;m excited to share
+          this journey with you — let&apos;s create some digital magic together!
         </motion.p>
         <motion.div
           style={{ marginTop: 15 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.44 }}
+          transition={{ delay: 0.48 }}
         >
           <Link to="mailto:isaqjonoviii@gmail.com?subject=Work together&body=Let's work together!">
-            <CustomBtn className="main__btn">Let's work together </CustomBtn>
+            <CustomBtn className="main__btn">
+              Let&apos;s work together{" "}
+            </CustomBtn>
           </Link>
         </motion.div>
       </div>
@@ -52,7 +54,7 @@ const Home = () => {
         className={c.main__img}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.46 }}
+        transition={{ delay: 0.5 }}
       >
         <img src={coder} alt="Ilhomjon Dev" />
       </motion.div>

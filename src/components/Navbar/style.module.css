@@ -6,7 +6,7 @@
 }
 .nav__logo {
   font-size: calc(1.2rem + 1vw);
-  font-family: var(--font-logo);
+  font-family: var(--font);
   color: var(--primary-text);
   transition: 200ms ease-in-out;
   opacity: 0.6;

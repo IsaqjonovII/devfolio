@@ -6,7 +6,7 @@
   height: calc(93svh - 80px);
   background: var(--primary-bg);
   padding: 80px calc(1rem + 1vw);
-  border-top: 1px solid var(--pr-btn-tr);
+  border-top: 1px solid var(--second-bg-tr);
   backdrop-filter: blur(8px) brightness(1) contrast(1) grayscale(0)
     hue-rotate(0) invert(0) opacity(1) saturate(1) sepia(0);
   text-align: center;

@@ -5,9 +5,10 @@ import Home from "pages/Home";
 import Sidebar from "components/Sidebar";
 import Navbar from "components/Navbar";
 import { routes } from "routes";
+import { DarkBulb, LightBulb } from "assets";
 
 const App = () => {
-  const [theme, setTheme] = useState("dark-theme");
+  const [theme, setTheme] = useState("dark");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -30,10 +31,16 @@ const App = () => {
         />
         <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
       </header>
+      <div className="theme__switcher">
+        {theme.includes("light") ? (
+          <LightBulb className="icon" onClick={() => setTheme("dark")} />
+        ) : (
+          <DarkBulb className="icon" onClick={() => setTheme("light")} />
+        )}
+      </div>
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />
-
           {routes.map(({ id, path, Component }) => (
             <Route key={id} path={path} element={<Component />} />
           ))}

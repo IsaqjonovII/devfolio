@@ -133,16 +133,3 @@ h3 {
   color: var(--primary-green);
   text-shadow: 0 2px 0px var(--dark-bg), 0 3px 0px var(--dark-bg);
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--primary-text);
-    background: var(--primary-bg);
-  }
-  a:hover {
-    color: var(--primary-green);
-  }
-  button {
-    background: var(--second-bg-tr);
-  }
-}

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import c from "./style.module.css";
-import CustomBtn from "components/Button";
+import { NavigateLink } from "components/Button";
 
 const Home = () => {
   return (
@@ -41,11 +40,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.48 }}
         >
-          <Link to="mailto:isaqjonoviii@gmail.com?subject=Work together&body=Let's work together!">
-            <CustomBtn className="main__btn">
-              Let&apos;s create some digital magic together!
-            </CustomBtn>
-          </Link>
+          <NavigateLink text="About me" link="/about-me" />
         </motion.div>
       </div>
     </main>

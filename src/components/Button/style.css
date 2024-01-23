@@ -29,7 +29,46 @@
   animation: storm1261 0.7s ease-in-out both;
   animation-delay: 0.06s;
 }
-
+.link {
+  font-size: var(--font-link);
+  max-width: fit-content;
+  & .arrow__wrp {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: grid;
+    transition: border-color 250ms all;
+    place-items: center;
+  }
+  & .arrow__icon {
+    width: 35px;
+    height: 25px;
+    fill: var(--primary-green);
+    transform-origin: left;
+    transition: 250ms all;
+    vertical-align: middle;
+    transform: translateX(-14px);
+  }
+  &:hover .arrow__icon {
+    transition: 100ms all;
+    animation: go 0.5s infinite linear;
+  }
+  &:hover .arrow__wrp {
+    border-color: var(--primary-green);
+    transition: border-color 250ms all;
+  }
+}
+@keyframes go {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 @keyframes rotate624 {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -105,5 +144,9 @@
 @media only screen and (max-width: 768px) {
   .btn__shine span {
     font-size: 0.825rem;
+  }
+  .link {
+    max-width: 100%;
+    justify-content: center !important;
   }
 }

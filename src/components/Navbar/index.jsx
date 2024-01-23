@@ -1,10 +1,10 @@
-import { bool, func } from "prop-types";
-import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { bool, func, string } from "prop-types";
+import { Link, NavLink } from "react-router-dom";
 import { routes } from "routes";
-import { DarkBulb, LightBulb } from "assets";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
+import { DarkBulb, LightBulb } from "assets";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
   return (
@@ -56,7 +56,9 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
 };
 
 Navbar.propTypes = {
-  isSidebarOpen: bool,
+  isSidebarOpen: bool.isRequired,
   setIsSidebarOpen: func.isRequired,
+  theme: string.isRequired,
+  setTheme: func.isRequired,
 };
 export default Navbar;

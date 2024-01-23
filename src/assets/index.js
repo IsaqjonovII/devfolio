@@ -7,6 +7,7 @@ import Github from "./github.svg?react";
 import Linkedin from "./in.svg?react";
 import X from "./x.svg?react";
 import Instagram from "./insta.svg?react";
+import ArrowRight from "./arrow-right.svg?react";
 
 export {
   myLogo,
@@ -18,4 +19,5 @@ export {
   Linkedin,
   X,
   Instagram,
+  ArrowRight,
 };

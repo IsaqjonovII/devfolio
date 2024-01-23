@@ -42,7 +42,7 @@ body {
   --primary-text: var(--light-text);
   --primary-green: var(--light-btn);
   --primary-bg: var(--light-bg);
-  --second-bg: var(--light-btn);
+  --second-bg: var(--light-btn-1);
   --second-bg-tr: var(--light-btn-tr);
 }
 .page__title {

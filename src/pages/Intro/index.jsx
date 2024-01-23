@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import c from "./style.module.css";
 import { introData, socialLinks } from "utils";
 import { coder } from "assets";
+import { NavigateLink } from "components/Button";
 
 const Intro = () => {
   return (
@@ -35,9 +36,8 @@ const Intro = () => {
                 {content}
               </div>
             ))}
-
             <div className="navigate__link">
-              <Link to="/portfolio">Explore my portfolio</Link>
+              <NavigateLink link="/portfolio" text="Explore my portfolio" />
             </div>
           </section>
         </div>

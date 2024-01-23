@@ -18,7 +18,7 @@
   --font-h5: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
   --font-h6: clamp(1rem, 0.9617rem + 0.1633vw, 1.125rem);
   --font-body: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
-  --font-link: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
+  --font-link: clamp(0.875rem, 0.875rem + 0.3265vw, 1.125rem);
   --font-mini: clamp(0.875rem, 0.8367rem + 0.1633vw, 1rem);
   --font-h2-display: clamp(1.875rem, 1.41rem + 2.449vw, 3.95rem);
 }

@@ -52,7 +52,7 @@
   color: var(--primary-text);
   font-family: var(--font-sans);
   margin-bottom: calc(1.5rem + 1vh);
-  max-width: 60rem;
+  max-width: calc(30rem + 30vw);
   &:first-child {
     font-size: var(--font-h3);
   }

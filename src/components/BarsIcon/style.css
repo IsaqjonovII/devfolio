@@ -2,6 +2,7 @@
   width: 25px;
   cursor: url("../../assets/cursor-pointer.png"), auto;
   display: none;
+  margin-left: 0.825rem;
 }
 
 .btn > span {

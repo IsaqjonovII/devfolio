@@ -130,6 +130,14 @@
     color: var(--primary-text);
   }
 }
+.theme__switcher {
+  cursor: url("../../assets/cursor-pointer.png"), auto !important;
+  & .icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--primary-green);
+  }
+}
 @keyframes shine {
   to {
     background-position: 200% center;

@@ -81,6 +81,14 @@
 @media only screen and (max-width: 550px) {
   .content__title {
     margin: 1.25rem 0;
+    font-size: var(--font-h3);
+  }
+  .title__label {
+    margin-bottom: 0.825rem;
+    font-size: var(--font-h2-display);
+  }
+  .subtitle:first-child {
+    font-size: var(--font-h4);
   }
 }
 @keyframes shine {

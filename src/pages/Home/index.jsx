@@ -33,7 +33,7 @@ const Home = () => {
         >
           As a web developer with a passion for creating user-friendly
           interfaces that tell a compelling story, I&apos;m excited to share
-          this journey with you — let&apos;s create some digital magic together!
+          this journey with you
         </motion.p>
         <motion.div
           style={{ marginTop: 15 }}
@@ -43,7 +43,7 @@ const Home = () => {
         >
           <Link to="mailto:isaqjonoviii@gmail.com?subject=Work together&body=Let's work together!">
             <CustomBtn className="main__btn">
-              Let&apos;s work together{" "}
+              Let&apos;s create some digital magic together!
             </CustomBtn>
           </Link>
         </motion.div>

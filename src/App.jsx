@@ -5,7 +5,6 @@ import Home from "pages/Home";
 import Sidebar from "components/Sidebar";
 import Navbar from "components/Navbar";
 import { routes } from "routes";
-import { DarkBulb, LightBulb } from "assets";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -28,16 +27,11 @@ const App = () => {
         <Navbar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
+          theme={theme}
+          setTheme={setTheme}
         />
         <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
       </header>
-      <div className="theme__switcher">
-        {theme.includes("light") ? (
-          <LightBulb className="icon" onClick={() => setTheme("dark")} />
-        ) : (
-          <DarkBulb className="icon" onClick={() => setTheme("light")} />
-        )}
-      </div>
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />

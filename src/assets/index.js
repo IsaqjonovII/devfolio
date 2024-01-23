@@ -1,4 +1,4 @@
-import myLogo from "./my-logo.webp";
+import Logo from "./my-logo.svg?react";
 import myResume from "./Resume.pdf";
 import coder from "./me.jpg";
 import LightBulb from "./light-bulb.svg?react";
@@ -10,7 +10,7 @@ import Instagram from "./insta.svg?react";
 import ArrowRight from "./arrow-right.svg?react";
 
 export {
-  myLogo,
+  Logo,
   myResume,
   coder,
   LightBulb,

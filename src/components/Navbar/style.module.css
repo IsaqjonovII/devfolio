@@ -4,14 +4,17 @@
   backdrop-filter: blur(8px) brightness(1) contrast(1) grayscale(0)
     hue-rotate(0) invert(0) opacity(1) saturate(1) sepia(0);
 }
-.nav__logo {
+.my__logo {
+  max-width: 4rem;
+  height: 100%;
   font-size: calc(1.2rem + 1vw);
   font-family: var(--font);
-  color: var(--primary-text);
-  transition: 200ms ease-in-out;
-  opacity: 0.6;
-  & .code {
-    color: var(--primary-green);
+  color: var(--primary-green);
+  transition: 200ms all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    filter: saturate(2);
   }
 }
 .logo__img {

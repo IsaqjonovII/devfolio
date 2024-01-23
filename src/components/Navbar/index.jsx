@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { routes } from "routes";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
-import { DarkBulb, LightBulb } from "assets";
+import { DarkBulb, LightBulb, Logo } from "assets";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
   return (
@@ -15,8 +15,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <span className={c.code}>{"<"}</span>Ilhomjon{" "}
-          <span className={c.code}>{" />"}</span>
+          <Logo className={c.my__logo} />
         </motion.div>
       </Link>
       <nav className="flex">

@@ -118,7 +118,7 @@ export const socialLinks = [
   },
   {
     key: "twitter",
-    label: "X",
+    label: "Twitter",
     link: "https://twitter.com/Ilhomjondev",
     Icon: X,
   },

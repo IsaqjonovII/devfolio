@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import { coder } from "assets";
 import c from "./style.module.css";
 import { introData, socialLinks } from "utils";
-import { coder } from "assets";
 import { NavigateLink } from "components/Button";
 
 const Intro = () => {
@@ -13,10 +13,12 @@ const Intro = () => {
         </section>
         <div className={c.section__wrp + " flex"}>
           <section className={c.me}>
-            <img className={c.intro__img} src={coder} alt="" />
+            <div className={c.img__wrp}>
+              <img className={c.intro__img} src={coder} alt="" />
+            </div>
 
             <div className={c.social__links}>
-              {socialLinks.map(({ key, link, Icon }) => (
+              {socialLinks.map(({ key, link, Icon, label }) => (
                 <Link
                   key={key}
                   to={link}
@@ -25,6 +27,7 @@ const Intro = () => {
                   className={c.social__link}
                 >
                   <Icon className={c.social__icon} />
+                  <span className={c.link__text}>{label}</span>
                 </Link>
               ))}
             </div>

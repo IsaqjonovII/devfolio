@@ -32,7 +32,7 @@
 }
 .intro__img {
   max-width: calc(10rem + 20vw);
-  border-radius: calc(4rem + 3vw) calc(4rem + 3vw) 0 0;
+  border-radius: calc(6rem + 3vw) calc(6rem + 3vw) 0 0;
 }
 .section__wrp {
   margin-top: calc(1.5rem + 1vh);
@@ -53,13 +53,30 @@
   font-family: var(--font);
   transition: 250ms all;
   overflow: hidden;
+  position: relative;
   font-size: var(--font-mini);
+  &:hover .social__icon {
+    transform: translateY(-12px) scale(0.8);
+    transition: 300ms all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &:hover .link__text {
+    transform: translateY(15px);
+    transition: 300ms all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 50ms;
+  }
 }
-
 .social__icon {
   width: 30px;
   height: 30px;
+  transform: translateY(1px);
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
   color: var(--primary-green);
+}
+.link__text {
+  position: absolute;
+  color: var(--primary-text);
+  transform: translateY(50px);
+  transition: 1.1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 .social__link:hover {
   opacity: 1;

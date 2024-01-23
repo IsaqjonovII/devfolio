@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { coder } from "assets";
 import c from "./style.module.css";
 import CustomBtn from "components/Button";
 
 const Home = () => {
   return (
     <main className={c.main}>
-      <div className={c.main__content}>
+      <div className="container">
         <motion.h1
-          className={c.content__subtitle}
+          className={c.subtitle}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.36 }}
@@ -49,15 +48,6 @@ const Home = () => {
           </Link>
         </motion.div>
       </div>
-
-      <motion.div
-        className={c.main__img}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        <img src={coder} alt="Ilhomjon Dev" />
-      </motion.div>
     </main>
   );
 };

@@ -11,7 +11,7 @@
   --light-btn-tr: #c8c3b390;
   --font-sans: "Varela", sans-serif;
   --font: "Viga", sans-serif;
-  --font-h1: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
+  --font-h1: clamp(3.2rem, 0.5692rem + 5.238vw, 13.75rem);
   --font-h2: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
   --font-h3: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
   --font-h4: clamp(1.375rem, 1.1837rem + 0.8163vw, 1.6rem);

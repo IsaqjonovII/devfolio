@@ -1,7 +1,9 @@
 import { HoverCards } from "components/HoverCard";
 import c from "./style.module.css";
+import { useState } from "react";
 
 const MyWork = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   return (
     <main className={c.portfolio}>
       <div className="container">
@@ -12,7 +14,8 @@ const MyWork = () => {
             <div className={c.project__card}></div>
           </div>
         </section>
-        <section>
+        <section className={c.container}>
+          <div className={c.follower}></div>
           <div className={c.sideprojects}>
             <div className={c.sproject__card}>
               <HoverCards />

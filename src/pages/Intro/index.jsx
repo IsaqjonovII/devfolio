@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { coder } from "assets";
 import c from "./style.module.css";
-import { introData, socialLinks } from "utils";
+import { introData, socialLinks } from "static";
 import { NavigateLink } from "components/Button";
 
 const Intro = () => {

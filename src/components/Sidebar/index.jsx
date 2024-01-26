@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import c from "./style.module.css";
 import { myResume } from "assets";
-import { framerVariants, itemVariants } from "utils/index";
+import { framerVariants, itemVariants } from "static/index";
 
 const Sidebar = () => {
   return (

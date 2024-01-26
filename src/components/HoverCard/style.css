@@ -1,0 +1,23 @@
+.hovercards__wrp {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 40rem));
+  gap: 1.2rem;
+}
+.hover__card {
+  max-height: 25rem;
+  padding: 1rem;
+  border-radius: 0.35rem;
+  position: relative;
+  display: block;
+}
+.card__effect {
+  background-color: #ffffff11;
+  position: absolute;
+  inset: 0;
+  border-radius: 0.35rem;
+  width: 100%;
+  height: 100%;
+}
+.card__content {
+  position: relative;
+}

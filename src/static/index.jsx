@@ -129,3 +129,72 @@ export const socialLinks = [
     Icon: Instagram,
   },
 ];
+
+let id = 0;
+export const sideProjectsData = [
+  {
+    id: id++,
+    title: "Motoshop",
+    info:
+      "MOTOSHOP is a marketplace dedicated to enthusiasts and riders who want to buy or sell motorcycles. Whether you're looking for your dream ride or looking to give a new home to your trusted companion, MOTOSHOP is the place to be.",
+    tags: [
+      "reactjs",
+      "antd",
+      "typescript",
+      "fastify",
+      "mongodb",
+      "nodejs",
+      "redux",
+      "rtk query",
+    ],
+    link: "https://motoshop.uz/",
+  },
+  {
+    id: id++,
+    title: "Twitter clone",
+    info:
+      " This platform offers all the essential features you'd expect from a social media platform: tweeting, liking, and replying to tweets. Users can easily create accounts with unique usernames and securely log in to start sharing their thoughts and engaging with others. Whether you're here to stay updated, express yourself, or connect with friends, this Twitter clone provides a familiar and user-friendly experience for all.",
+    tags: [
+      "react",
+      "redux toolkit",
+      "rtk query",
+      "express",
+      "mongodb",
+      "responsive web design",
+      "typescript",
+      "chakra ui",
+    ],
+    link: "https://uztwit.vercel.app/",
+  },
+  {
+    id: id++,
+    title: "Certificate generator",
+    info:
+      "Accelerate certificate creation with our tool. Upload a template, position text, and merge PDFs effortlessly. Perfect for education centers, it streamlines the process, ensuring professional certificates in seconds. Say goodbye to manual work and hello to efficient, personalized certificates for your recipients' achievements.",
+    tags: ["react", "pdf-lib"],
+    link: "/portfolio",
+  },
+  {
+    id: id++,
+    title: "Free Images. Pexels",
+    info:
+      "Explore endless free images with our website powered by the Pexels API. Download as many as you desire for your projects, with no limits. Simplify your search for high-quality visuals and enhance your creative endeavors with ease.",
+    tags: ["react", "pexels api", "axios"],
+    link: "https://pexels-teal.vercel.app/",
+  },
+  {
+    id: id++,
+    title: "Avtoqulay",
+    info:
+      "Presenting Avtoqulay, the distinguished 3rd place winner of the hackathon, currently available as a robust web version. Seamlessly locate fuel stations, filter by price, and access real-time updates. With a comprehensive marketplace for car-related items, Avtoqulay ensures reliability and professionalism for all drivers, with mobile capabilities coming soon.",
+    tags: [
+      "reactjs",
+      "axios",
+      "nodejs",
+      "express",
+      "mongodb",
+      "google places api",
+    ],
+    link: "https://avtoqulay.vercel.app/",
+  },
+];

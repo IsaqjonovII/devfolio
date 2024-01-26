@@ -1,3 +1,4 @@
+import { HoverCards } from "components/HoverCard";
 import c from "./style.module.css";
 
 const MyWork = () => {
@@ -8,8 +9,13 @@ const MyWork = () => {
 
         <section>
           <div className={c.projects__wrp}>
-            <div className={c.project__card}>
-              
+            <div className={c.project__card}></div>
+          </div>
+        </section>
+        <section>
+          <div className={c.sideprojects}>
+            <div className={c.sproject__card}>
+              <HoverCards />
             </div>
           </div>
         </section>

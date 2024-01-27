@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import Sidebar from "components/Sidebar";
 import Navbar from "components/Navbar";
 import { routes } from "routes";
+const MyWork = lazy(() => import("pages/Work"));
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -38,6 +39,7 @@ const App = () => {
           {routes.map(({ id, path, Component }) => (
             <Route key={id} path={path} element={<Component />} />
           ))}
+          <Route path="/mywork/:key" element={<MyWork />} />
         </Routes>
       </AnimatePresence>
     </div>

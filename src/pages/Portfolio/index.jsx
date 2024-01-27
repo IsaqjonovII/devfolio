@@ -1,18 +1,21 @@
 import { HoverCards } from "components/HoverCards";
 import c from "./style.module.css";
-// import CustomSwiper from "component s/Swiper";
+import CustomSwiper from "components/Swiper";
+import { recentProjects } from "static";
 
 const MyWork = () => {
   return (
     <main className={c.portfolio}>
       <div className="container">
-        <h1 className={c.page__title}>Projects I did</h1>
+        <h1 className={c.page__title}>Things I have done</h1>
 
-        <section>{/* <CustomSwiper /> */}</section>
+        <section>
+          <h1 className={c.section__title}>My recent work</h1>
+          <CustomSwiper data={recentProjects} />
+        </section>
         <section className={c.container}>
-          <div className={c.sideprojects}>
-            <HoverCards />
-          </div>
+          <h1 className={c.section__title}>Other remarkable projects</h1>
+          <HoverCards />
         </section>
       </div>
     </main>

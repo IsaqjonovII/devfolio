@@ -12,9 +12,9 @@ const CustomBtn = ({ children, className }) => {
 };
 export default CustomBtn;
 
-export const NavigateLink = ({ text, link }) => {
+export const NavigateLink = ({ text, link, className }) => {
   return (
-    <Link to={link} className="link flex">
+    <Link to={link} className={"link flex " + className}>
       {text}
       <div className="arrow__wrp">
         <ArrowRight className="arrow__icon" />
@@ -24,6 +24,7 @@ export const NavigateLink = ({ text, link }) => {
 };
 
 NavigateLink.propTypes = {
+  className: string,
   text: string.isRequired,
   link: string.isRequired,
 };

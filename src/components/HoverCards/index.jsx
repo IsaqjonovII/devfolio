@@ -12,8 +12,8 @@ export const HoverCards = () => {
     setMousePositions((prevState) => ({
       ...prevState,
       [id]: {
-        y: clientY - top + "px",
-        x: clientX - left + "px",
+        y: `${clientY - top}px`,
+        x: `${clientX - left}px`,
       },
     }));
   };

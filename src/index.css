@@ -9,8 +9,9 @@
   --light-btn-1: #c8c3b3;
   --dark-btn-tr: #1f5e6b61;
   --light-btn-tr: #c8c3b390;
+  --bg-overlay: #131b21d5;
+  --bg-light-overlay: #918b7dd8;
   --font-sans: "Varela", sans-serif;
-  --shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
   --font: "Viga", sans-serif;
   --pointer: url("assets/cursor-pointer.png"), auto !important;
   --font-h1: clamp(3.2rem, 0.5692rem + 4.638vw, 13.75rem);
@@ -33,6 +34,7 @@
 }
 .dark,
 body {
+  --overlay: var(--bg-overlay);
   --primary-text: var(--white);
   --primary-green: var(--green);
   --primary-bg: var(--dark-bg);
@@ -41,6 +43,7 @@ body {
 }
 .light,
 body {
+  --overlay: var(--bg-light-overlay);
   --primary-text: var(--light-text);
   --primary-green: var(--light-btn);
   --primary-bg: var(--light-bg);
@@ -86,6 +89,9 @@ button {
 body {
   background: var(--primary-bg);
   cursor: url("assets/cursor-default.png"), auto !important;
+}
+img {
+  user-select: none;
 }
 h1,
 h2,

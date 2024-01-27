@@ -135,8 +135,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Motoshop",
-    info:
-      "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
+    info: "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
     tags: [
       "react",
       "antd",
@@ -153,8 +152,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Twitter clone",
-    info:
-      "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
+    info: "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
     tags: [
       "react",
       "redux-toolkit",
@@ -171,8 +169,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Certificate generator",
-    info:
-      "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
+    info: "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
     tags: ["react", "pdf-lib"],
     link: "/portfolio",
     repoLink: "/portfolio",
@@ -180,8 +177,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Free Images. Pexels",
-    info:
-      "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
+    info: "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
     tags: ["react", "pexels-api", "axios"],
     link: "https://pexels-teal.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/pexels",
@@ -189,8 +185,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Avtoqulay",
-    info:
-      "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
+    info: "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
     tags: [
       "react",
       "axios",
@@ -207,26 +202,44 @@ id = 0;
 export const recentProjects = [
   {
     id: id++,
+    key: "bismillah-travel",
     title: "Bismillah-Travel",
     content: "",
     subtitle: "Tour company landing page website",
     link: "https://bismillah-travel.uz/",
-    images: [],
+    images: [
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/nvexbvhkndwhvxi70anq",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/ceaxmfp4lt3ka6boubuh.png",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/fv4ym4ukzjqbzxrthgf0.png",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/xmhl5p2ljou7sgvx1trs",
+    ],
   },
   {
     id: id++,
+    key: "itc-nurafshon",
     title: "IT Center Nurafshon",
     content: "",
     subtitle: "Website for Nurafshon branch of IT Center",
     link: "https://itc-nurafshon.uz/",
-    images: [],
+    images: [
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/zvcvcu1zgpv1obixzu3n.png",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/mm2p90icrjh2opumzqod.png",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/nz650p3rwxzwlab4jrjh",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/hjlkjcunofucrb8o0jhk",
+    ],
   },
   {
     id: id++,
+    key: "itpark-tashkent",
     title: "IT Park Tashkent Region",
     content: "",
     subtitle: "Website for Tashkent Region branch of IT Park",
     link: "https://it-park-tau.vercel.app/",
-    images: [],
+    images: [
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/akvshec4rdomn609fovo",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/audn4quanajrki3pgt9g",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/zftkgh5jwjx3syqgpjpe",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/f_auto,q_auto/x275u79dpqlurmdwfyjx",
+    ],
   },
 ];

@@ -135,7 +135,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Motoshop",
-    info: "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
+    info:
+      "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
     tags: [
       "react",
       "antd",
@@ -152,7 +153,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Twitter clone",
-    info: "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
+    info:
+      "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
     tags: [
       "react",
       "redux-toolkit",
@@ -169,7 +171,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Certificate generator",
-    info: "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
+    info:
+      "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
     tags: ["react", "pdf-lib"],
     link: "/portfolio",
     repoLink: "/portfolio",
@@ -177,7 +180,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Free Images. Pexels",
-    info: "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
+    info:
+      "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
     tags: ["react", "pexels-api", "axios"],
     link: "https://pexels-teal.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/pexels",
@@ -185,7 +189,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Avtoqulay",
-    info: "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
+    info:
+      "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
     tags: [
       "react",
       "axios",
@@ -196,5 +201,32 @@ export const sideProjectsData = [
     ],
     link: "https://avtoqulay.vercel.app/",
     repoLink: "https://avtoqulay.vercel.app/",
+  },
+];
+id = 0;
+export const recentProjects = [
+  {
+    id: id++,
+    title: "Bismillah-Travel",
+    content: "",
+    subtitle: "Tour company landing page website",
+    link: "https://bismillah-travel.uz/",
+    images: [],
+  },
+  {
+    id: id++,
+    title: "IT Center Nurafshon",
+    content: "",
+    subtitle: "Website for Nurafshon branch of IT Center",
+    link: "https://itc-nurafshon.uz/",
+    images: [],
+  },
+  {
+    id: id++,
+    title: "IT Park Tashkent Region",
+    content: "",
+    subtitle: "Website for Tashkent Region branch of IT Park",
+    link: "https://it-park-tau.vercel.app/",
+    images: [],
   },
 ];

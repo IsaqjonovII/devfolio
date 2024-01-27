@@ -4,38 +4,40 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./styles.css";
+import "./style.css";
 
-const Swiper = ({ data }) => {
+const CustomSwiper = ({ data }) => {
   return (
-    <div>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        {data.map(({ id, title, img, subtitle }) => (
-          <SwiperSlide key={id}>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <Swiper
+      effect={"coverflow"}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={"auto"}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={true}
+      modules={[EffectCoverflow, Pagination]}
+      className="mySwiper"
+    >
+      {data.map(({ id, title, images, subtitle }) => (
+        <SwiperSlide key={id}>
+          <img src={images[0]} />
+          <div className="swiper__overlay">
+            <h1 className="swiper__title">{title}</h1>
+            <h2 className="swiper__subtitle">{subtitle}</h2>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
-export default Swiper;
-Swiper.propTypes = {
+export default CustomSwiper;
+CustomSwiper.propTypes = {
   data: array.isRequired,
 };

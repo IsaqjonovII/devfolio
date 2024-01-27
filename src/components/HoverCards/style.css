@@ -12,10 +12,30 @@
   color: var(--primary-text);
   font-family: var(--font-sans);
   transition: 200ms all;
-  box-shadow: var(--shadow);
-  &:hover {
-    background-color: var(--second-bg-tr);
-  }
+  /* box-shadow: var(--shadow); */
+  background-color: var(--primary-bg);
+  position: relative;
+  z-index: 2;
+}
+.card:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    var(--second-bg-tr),
+    #ffffff00
+  );
+  border-image: radial-gradient(
+      20% 75% at var(--x) var(--y),
+      var(--primary-green),
+      var(--second-bg-tr)
+    )
+    1 / 1px / 0px stretch;
 }
 .icon {
   margin-left: 1rem;

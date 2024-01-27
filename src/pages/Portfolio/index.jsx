@@ -1,13 +1,7 @@
-import { HoverCards } from "components/HoverCard";
+import { HoverCards } from "components/HoverCards";
 import c from "./style.module.css";
-import { useState } from "react";
 
 const MyWork = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const getMousePosition = ({ clientY, clientX }) =>
-    setMousePosition({ x: clientX, y: clientY });
-
   return (
     <main className={c.portfolio}>
       <div className="container">
@@ -18,18 +12,9 @@ const MyWork = () => {
             <div className={c.project__card}></div>
           </div>
         </section>
-        <section className={c.container} onMouseMove={getMousePosition}>
-          <div
-            className={c.follower}
-            style={{
-              top: mousePosition.y + "px",
-              left: mousePosition.x + "px",
-            }}
-          ></div>
+        <section className={c.container}>
           <div className={c.sideprojects}>
-            <div className={c.sproject__card}>
-              <HoverCards />
-            </div>
+            <HoverCards />
           </div>
         </section>
       </div>

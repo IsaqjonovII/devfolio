@@ -1,13 +1,41 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./style.css";
 import { sideProjectsData } from "static";
 import { Github, LinkIcon } from "assets";
 
 export const HoverCards = () => {
+  const [mousePositions, setMousePositions] = useState({});
+
+  const getMousePosition = (id, { clientY, clientX }) => {
+    const { top, left } = document.getElementById(id).getBoundingClientRect();
+    setMousePositions((prevState) => ({
+      ...prevState,
+      [id]: {
+        y: clientY - top + "px",
+        x: clientX - left + "px",
+      },
+    }));
+  };
   return (
     <div className="cards__wrp container">
       {sideProjectsData.map(({ title, info, tags, id, link, repoLink }) => (
-        <div className="card" key={id}>
+        <div
+          key={id}
+          className="card"
+          onMouseMove={(e) => getMousePosition(id, e)}
+          onMouseLeave={() =>
+            setMousePositions((prevState) => ({
+              ...prevState,
+              [id]: { x: 0, y: 0 },
+            }))
+          }
+          id={id}
+          style={{
+            "--y": mousePositions[id]?.y || "0",
+            "--x": mousePositions[id]?.x || "0",
+          }}
+        >
           <div className="card__content">
             <div className="card__head flex">
               <h1 className="card__title">{title}</h1>

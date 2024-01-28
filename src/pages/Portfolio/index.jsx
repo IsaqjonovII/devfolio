@@ -7,7 +7,7 @@ const MyWork = () => {
   return (
     <main className={c.portfolio}>
       <div className="container">
-        <h1 className={c.page__title}>Things I have done</h1>
+        <h1 className={c.page__title}>Projects I have built</h1>
 
         <section>
           <h1 className={c.section__title}>My recent work</h1>

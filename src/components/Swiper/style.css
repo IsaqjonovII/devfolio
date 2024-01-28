@@ -4,8 +4,8 @@
 }
 .swiper-wrapper {
   max-width: 1250px;
-  height: 60vh;
-  height: 60svh;
+  height: 80vh;
+  height: 80svh;
   background-image: var(--second-bg-tr);
 }
 .swiper__card {
@@ -29,17 +29,23 @@
 .swiper__subtitle {
   font-size: var(--font-h4);
 }
-/* 
-* https://res.cloudinary.com/doswy0zdn/image/upload/v1706365971/xmhl5p2ljou7sgvx1trs.png
-bt-1024
-*/
 .text-center {
   margin: 0.5rem auto;
 }
 .swiper-pagination-bullet {
-  background-color: var(--second-bg);
-  opacity: 1;
+  background-color: var(--second-bg) !important;
+  opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
-  background-color: var(--primary-green);
+  background-color: var(--primary-green) !important;
+}
+@media only screen and (max-width: 550px) {
+  .swiper-wrapper {
+    height: 50vh;
+    height: 50svh !important;
+  }
+  .swiper__card {
+    background-size: contain ;
+    background-position: center;
+  }
 }

@@ -1,12 +1,11 @@
 import { array } from "prop-types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "./style.css";
-import { Link } from "react-router-dom";
 import { NavigateLink } from "components/Button";
+import "swiper/css";
+import "./style.css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const CustomSwiper = ({ data }) => {
   return (
@@ -26,26 +25,32 @@ const CustomSwiper = ({ data }) => {
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      {data.map(({ id, title, images, subtitle, key }) => (
-        <SwiperSlide key={id}>
-          <div
-            className="swiper__card"
-            style={{ backgroundImage: `url(${images[0]})` }}
-          >
-            <div className="swiper__overlay">
-              <div className="swiper__content">
-                <h1 className="swiper__title">{title}</h1>
-                <h2 className="swiper__subtitle">{subtitle}</h2>
-                <NavigateLink
-                  className="text-center"
-                  text="Learn more"
-                  link={`/mywork/${key}`}
-                />
+      {data.map(({ id, title, images, subtitle, key }) => {
+        const imageUri =
+          window.innerWidth > 768 ? images[0] : images[images.length - 1];
+        return (
+          <SwiperSlide key={id}>
+            <div
+              className="swiper__card"
+              style={{
+                backgroundImage: `url(${imageUri})`,
+              }}
+            >
+              <div className="swiper__overlay">
+                <div className="swiper__content">
+                  <h1 className="swiper__title">{title}</h1>
+                  <h2 className="swiper__subtitle">{subtitle}</h2>
+                  <NavigateLink
+                    className="text-center"
+                    text="Learn more"
+                    link={`/mywork/${key}`}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };

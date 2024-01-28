@@ -48,6 +48,9 @@
 .card__head {
   padding: 0.825rem 0;
 }
+.card__title {
+  font-size: var(--font-h4);
+}
 .card__info {
   line-height: 1.5;
   margin: 1rem 0;

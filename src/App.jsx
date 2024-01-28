@@ -5,11 +5,13 @@ import Home from "pages/Home";
 import Sidebar from "components/Sidebar";
 import Navbar from "components/Navbar";
 import { routes } from "routes";
+import Contact from "pages/Contact";
 const MyWork = lazy(() => import("pages/Work"));
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isContacted, setIsContacted] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
     setIsSidebarOpen(false);
@@ -26,13 +28,23 @@ const App = () => {
     <div className={"app"}>
       <header className="header__container">
         <Navbar
-          isSidebarOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
           theme={theme}
+          isContacted={isContacted}
+          isSidebarOpen={isSidebarOpen}
           setTheme={setTheme}
+          setIsContacted={setIsContacted}
+          setIsSidebarOpen={setIsSidebarOpen}
         />
-        <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
+        <AnimatePresence>
+          {isSidebarOpen && (
+            <Sidebar
+              isSidebarOpen={isSidebarOpen}
+              setIsSidebarOpen={setIsSidebarOpen}
+            />
+          )}
+        </AnimatePresence>
       </header>
+      <Contact />
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />

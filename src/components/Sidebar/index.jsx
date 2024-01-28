@@ -1,11 +1,12 @@
 import { routes } from "routes";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { bool, func } from "prop-types";
 import c from "./style.module.css";
 import { myResume } from "assets";
-import { framerVariants, itemVariants } from "static/index";
+import { framerVariants, itemVariants } from "static";
 
-const Sidebar = () => {
+const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
     <motion.aside
       className={c.sidebar__wrp}
@@ -30,13 +31,20 @@ const Sidebar = () => {
         exit="closed"
         variants={framerVariants}
       >
-        <motion.li variants={itemVariants}>
+        <motion.li
+          variants={itemVariants}
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        >
           <Link className={c.sidebar__link} to="/">
             Home
           </Link>
         </motion.li>
         {routes.map(({ id, path, title }) => (
-          <motion.li key={id} variants={itemVariants}>
+          <motion.li
+            key={id}
+            variants={itemVariants}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
             <Link className={c.sidebar__link} to={path}>
               {title}
             </Link>
@@ -52,3 +60,7 @@ const Sidebar = () => {
   );
 };
 export default Sidebar;
+Sidebar.propTypes = {
+  isSidebarOpen: bool.isRequired,
+  setIsSidebarOpen: func.isRequired,
+};

@@ -1,0 +1,8 @@
+.contact__main {
+    width: 100%;
+    max-width: 25rem;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: var(--second-bg);
+}

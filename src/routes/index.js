@@ -1,7 +1,6 @@
 import { lazy } from "react";
 
 const Intro = lazy(() => import("pages/Intro"));
-const MySkills = lazy(() => import("pages/Expertise"));
 const Portfolio = lazy(() => import("pages/Portfolio"));
 
 let id = 0;
@@ -17,11 +16,5 @@ export const routes = [
     title: "Portfolio",
     path: "/portfolio",
     Component: Portfolio,
-  },
-  {
-    id: id++,
-    title: "Expertise",
-    path: "/expertise",
-    Component: MySkills,
   },
 ];

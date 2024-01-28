@@ -37,14 +37,33 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
               </NavLink>
             </motion.li>
           ))}
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <p
+              className={c.menu__link}
+              // className={({ isActive }) =>
+              //   isActive ? `${c.menu__link} ${c.active__link}` : c.menu__link
+              // }
+            >
+              <span>3. </span> Contact
+            </p>
+          </motion.li>
         </ul>
-        <div className={c.theme__switcher}>
+        <motion.div
+          className={c.theme__switcher}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           {theme.includes("light") ? (
             <LightBulb className={c.icon} onClick={() => setTheme("dark")} />
           ) : (
             <DarkBulb className={c.icon} onClick={() => setTheme("light")} />
           )}
-        </div>
+        </motion.div>
         <BarsIcon
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}

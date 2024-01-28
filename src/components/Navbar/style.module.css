@@ -35,6 +35,8 @@
   padding: 0.5rem 0.825rem;
   font-size: 1.3rem;
   transition: 130ms ease-in;
+  font-family: var(--font-sans);
+  cursor: var(--pointer);
   &:hover {
     color: var(--primary-text);
     opacity: 1;

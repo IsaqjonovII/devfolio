@@ -9,6 +9,7 @@ import X from "./x.svg?react";
 import Instagram from "./insta.svg?react";
 import ArrowRight from "./arrow-right.svg?react";
 import LinkIcon from "./link.svg?react";
+import TimesIcon from "./times.svg?react";
 
 export {
   Logo,
@@ -22,4 +23,5 @@ export {
   Instagram,
   ArrowRight,
   LinkIcon,
+  TimesIcon,
 };

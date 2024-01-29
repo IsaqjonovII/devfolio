@@ -144,12 +144,27 @@
     fill: var(--primary-green);
   }
 }
+.contact__active {
+  background: linear-gradient(
+    to right,
+    var(--second-bg) 20%,
+    var(--primary-green) 40%,
+    var(--primary-green) 60%,
+    var(--second-bg) 80%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+  font-weight: 800;
+}
 @keyframes shine {
   to {
     background-position: 200% center;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .nav__menu {
     display: none !important;
   }

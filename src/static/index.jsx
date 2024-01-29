@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const framerVariants = {
   closed: {
     transition: {
-      staggerChildren: 0.06,
+      staggerChildren: 0.04,
       staggerDirection: -1,
     },
   },
@@ -20,7 +20,7 @@ export const itemVariants = {
     opacity: 0,
     y: 0,
   },
-  open: { opacity: 1, y: -30 },
+  open: { opacity: 1, y: -10 },
 };
 
 export const introData = [
@@ -243,3 +243,30 @@ export const recentProjects = [
     ],
   },
 ];
+export const msgData = {
+  greeting: [
+    "Hi!",
+    "I'm Dev bro. You can me ask questions about Ilhomjon's work.",
+    "How may I help you today?",
+  ],
+  options: [
+    {
+      key: "helloReply",
+      text: "Just saying hello!",
+    },
+    {
+      key: "partner",
+      text: "Interested in teaming up",
+    },
+    {
+      key: "hiring",
+      text: "Considering you for a job opportunity",
+    },
+  ],
+  helloReply: [
+    "Hey there!",
+    "Thanks for saying hi",
+    "Can i help you with other things?",
+  ],
+  partnerReply: ["Ok, Let's chat further"],
+};

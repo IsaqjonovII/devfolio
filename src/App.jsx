@@ -15,6 +15,7 @@ const App = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     setIsSidebarOpen(false);
+    setIsContacted(false);
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
@@ -38,13 +39,15 @@ const App = () => {
         <AnimatePresence>
           {isSidebarOpen && (
             <Sidebar
+              isContacted={isContacted}
               isSidebarOpen={isSidebarOpen}
+              setIsContacted={setIsContacted}
               setIsSidebarOpen={setIsSidebarOpen}
             />
           )}
+          {isContacted && <Contact setIsContacted={setIsContacted} />}
         </AnimatePresence>
       </header>
-      <Contact />
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />

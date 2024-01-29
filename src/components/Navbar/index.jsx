@@ -6,7 +6,14 @@ import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
 import { DarkBulb, LightBulb, Logo } from "assets";
 
-const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
+const Navbar = ({
+  isSidebarOpen,
+  setIsSidebarOpen,
+  theme,
+  setTheme,
+  isContacted,
+  setIsContacted,
+}) => {
   return (
     <div className={`${c.header} flex`}>
       <Link to="/">
@@ -43,10 +50,12 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
             transition={{ delay: 0.2 }}
           >
             <p
-              className={c.menu__link}
-              // className={({ isActive }) =>
-              //   isActive ? `${c.menu__link} ${c.active__link}` : c.menu__link
-              // }
+              onClick={() => setIsContacted(!isContacted)}
+              className={
+                isContacted
+                  ? `${c.menu__link} ${c.contact__active}`
+                  : c.menu__link
+              }
             >
               <span>3. </span> Contact
             </p>

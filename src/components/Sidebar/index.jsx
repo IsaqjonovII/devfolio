@@ -6,7 +6,12 @@ import c from "./style.module.css";
 import { myResume } from "assets";
 import { framerVariants, itemVariants } from "static";
 
-const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
+const Sidebar = ({
+  isSidebarOpen,
+  setIsSidebarOpen,
+  setIsContacted,
+  isContacted,
+}) => {
   return (
     <motion.aside
       className={c.sidebar__wrp}
@@ -50,6 +55,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             </Link>
           </motion.li>
         ))}
+        <motion.li
+          variants={itemVariants}
+          className={c.sidebar__link}
+          onClick={() => setIsContacted(!isContacted)}
+        >
+          Contact
+        </motion.li>
         <motion.li variants={itemVariants}>
           <a href={myResume} download={true}>
             <button className={c.menu__btn}>Resume / CV</button>

@@ -1,5 +1,5 @@
 import { lazy } from "react";
-
+import Home from "pages/Home";
 const Intro = lazy(() => import("pages/Intro"));
 const Portfolio = lazy(() => import("pages/Portfolio"));
 
@@ -7,14 +7,20 @@ let id = 0;
 export const routes = [
   {
     id: id++,
+    key: "home",
+    title: "Home",
+    Component: Home,
+  },
+  {
+    id: id++,
+    key: "intro",
     title: "Intro",
-    path: "/about-me",
     Component: Intro,
   },
   {
     id: id++,
+    key: "portfolio",
     title: "Portfolio",
-    path: "/portfolio",
     Component: Portfolio,
   },
 ];

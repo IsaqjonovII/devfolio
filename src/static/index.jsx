@@ -255,7 +255,7 @@ export const msgData = {
       text: "Just saying hello!",
     },
     {
-      key: "partner",
+      key: "partnerReply",
       text: "Interested in teaming up",
     },
     {
@@ -268,5 +268,13 @@ export const msgData = {
     "Thanks for saying hi",
     "Can i help you with other things?",
   ],
-  partnerReply: ["Ok, Let's chat further"],
+  partnerReply: [
+    "Ok, Let's chat further",
+    <Link to="mailto:isaqjonoviii@gmail.com?subject=Hi">Send message</Link>,
+  ],
+  hiring: [
+    "Oh nice",
+    "Let's discuss it",
+    <Link to="mailto:isaqjonoviii@gmail.com?subject=Hi">Send message</Link>,
+  ],
 };

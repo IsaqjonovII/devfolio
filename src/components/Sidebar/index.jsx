@@ -12,6 +12,9 @@ const Sidebar = ({
   setIsContacted,
   isContacted,
 }) => {
+  const handleScroll = (el) => {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <motion.aside
       className={c.sidebar__wrp}
@@ -36,21 +39,23 @@ const Sidebar = ({
         exit="closed"
         variants={framerVariants}
       >
-        <motion.li
-          variants={itemVariants}
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        >
-          <Link className={c.sidebar__link} to="/">
-            Home
-          </Link>
-        </motion.li>
-        {routes.map(({ id, path, title }) => (
+        {routes.map(({ id, key, title, path }) => (
           <motion.li
             key={id}
             variants={itemVariants}
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           >
-            <Link className={c.sidebar__link} to={path}>
+            <Link
+              className={c.sidebar__link}
+              to={path}
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.getElementById(key);
+                if (targetElement) {
+                  handleScroll(targetElement);
+                }
+              }}
+            >
               {title}
             </Link>
           </motion.li>

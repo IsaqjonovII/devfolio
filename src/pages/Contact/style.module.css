@@ -41,8 +41,8 @@
 }
 .messages {
   background-color: transparent;
-  padding: 1rem;
-  height: 100%;
+  padding: 2rem 1rem;
+  height: calc(100% - 4rem);
   width: 100%;
   overflow: auto;
   font-family: var(--font-sans);
@@ -71,5 +71,5 @@
   margin-left: auto;
 }
 .options {
-  margin-top: 1.5rem;
+  margin: 1rem 0;
 }

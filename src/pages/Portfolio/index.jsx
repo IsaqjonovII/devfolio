@@ -5,7 +5,7 @@ import { recentProjects } from "static";
 
 const MyWork = () => {
   return (
-    <main className={c.portfolio}>
+    <main className={c.portfolio} id="portfolio">
       <div className="container">
         <h1 className={c.page__title}>Projects I have built</h1>
 

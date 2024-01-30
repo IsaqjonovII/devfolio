@@ -6,12 +6,13 @@ import { TimesIcon, coder } from "assets";
 import { framerVariants, itemVariants, msgData } from "static";
 
 const Contact = ({ setIsContacted }) => {
-  const [showMsg, setShowMsg] = useState("options");
   const [selectedOption, setSelectedOption] = useState({ key: "", text: "" });
+  const [showNext, setshowNext] = useState(false);
   const handleSendMsg = (key, text) => {
     setSelectedOption({ ...selectedOption, key, text });
+    setshowNext(true);
   };
-  console.log(selectedOption, "selected option");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -47,18 +48,48 @@ const Contact = ({ setIsContacted }) => {
         {selectedOption.text && (
           <div className={c.replied}>{selectedOption?.text}</div>
         )}
-        <div className={c.options}>
-          {msgData.options.map(({ key, text }) => (
-            <motion.div
-              className={c.option__btn}
-              variants={itemVariants}
-              key={key}
-              onClick={() => handleSendMsg(key, text)}
-            >
-              {text}
-            </motion.div>
-          ))}
-        </div>
+        {!showNext ? (
+          <div className={c.options}>
+            {msgData.options.map(({ key, text }) => (
+              <motion.div
+                className={c.option__btn}
+                variants={itemVariants}
+                key={key}
+                onClick={() => handleSendMsg(key, text)}
+              >
+                {text}
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            className={c.options}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={framerVariants}
+          >
+            {msgData[selectedOption.key].map((msg) => (
+              <motion.div className={c.msg} variants={itemVariants} key={msg}>
+                {msg}
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+        {selectedOption.key.includes("helloReply") && (
+          <div className={c.options}>
+            {msgData.options.map(({ key, text }) => (
+              <motion.div
+                className={c.option__btn}
+                variants={itemVariants}
+                key={key}
+                onClick={() => handleSendMsg(key, text)}
+              >
+                {text}
+              </motion.div>
+            ))}
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );

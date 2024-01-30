@@ -4,7 +4,7 @@ import { NavigateLink } from "components/Button";
 
 const Home = () => {
   return (
-    <main className={c.main}>
+    <main className={c.main} id="home">
       <div className="container">
         <motion.h1
           className={c.subtitle}

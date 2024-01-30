@@ -14,6 +14,9 @@ const Navbar = ({
   isContacted,
   setIsContacted,
 }) => {
+  const handleScroll = (el) => {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <div className={`${c.header} flex`}>
       <Link to="/">
@@ -27,21 +30,26 @@ const Navbar = ({
       </Link>
       <nav className="flex">
         <ul className={`${c.nav__menu} flex`}>
-          {routes.map(({ id, path, title }) => (
+          {routes.map(({ id, path, title, key }) => (
             <motion.li
               key={id}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: id * 0.1 }}
             >
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? `${c.menu__link} ${c.active__link}` : c.menu__link
-                }
+              <Link
+                className={c.menu__link}
                 to={path}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetElement = document.getElementById(key);
+                  if (targetElement) {
+                    handleScroll(targetElement);
+                  }
+                }}
               >
                 <span>{id}. </span> {title}
-              </NavLink>
+              </Link>
             </motion.li>
           ))}
           <motion.li

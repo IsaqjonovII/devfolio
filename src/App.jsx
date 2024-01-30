@@ -1,7 +1,7 @@
 import { lazy, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useLocation, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
+
 import Sidebar from "components/Sidebar";
 import Navbar from "components/Navbar";
 import { routes } from "routes";
@@ -49,11 +49,10 @@ const App = () => {
         </AnimatePresence>
       </header>
       <AnimatePresence>
+        {routes.map(({ id, Component }) => (
+          <Component key={id} />
+        ))}
         <Routes>
-          <Route path="/" element={<Home />} />
-          {routes.map(({ id, path, Component }) => (
-            <Route key={id} path={path} element={<Component />} />
-          ))}
           <Route path="/mywork/:key" element={<MyWork />} />
         </Routes>
       </AnimatePresence>

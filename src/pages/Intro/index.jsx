@@ -6,7 +6,7 @@ import { NavigateLink } from "components/Button";
 
 const Intro = () => {
   return (
-    <main className={c.intro}>
+    <main className={c.intro} id="intro">
       <div className="container">
         <section>
           <h1 className={c.intro__title}>It&apos;s About Me</h1>

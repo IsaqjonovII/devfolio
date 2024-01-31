@@ -151,7 +151,7 @@ export const sideProjectsData = [
   },
   {
     id: id++,
-    title: "Twitter clone",
+    title: "Twitter",
     info: "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
     tags: [
       "react",
@@ -196,6 +196,14 @@ export const sideProjectsData = [
     ],
     link: "https://avtoqulay.vercel.app/",
     repoLink: "https://avtoqulay.vercel.app/",
+  },
+  {
+    id: id++,
+    title: "Hogan",
+    info: "Built as a shoe e-commerce clone website, this project harnesses React, Firebase, and Redux Toolkit. React shapes the UI, Firebase handles data and authentication, and Redux Toolkit manages state.",
+    tags: ["react", "firebase", "reduxt-toolkit", "vercel"],
+    link: "https://hogan-rebel.vercel.app/",
+    repoLink: "https://github.com/IsaqjonovII/Hogan",
   },
 ];
 id = 0;

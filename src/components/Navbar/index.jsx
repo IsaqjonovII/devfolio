@@ -30,9 +30,9 @@ const Navbar = ({
       </Link>
       <nav className="flex">
         <ul className={`${c.nav__menu} flex`}>
-          {routes.map(({ id, path, title, key }) => (
+          {routes.map(({ id, path, title, key }, index) => (
             <motion.li
-              key={id}
+              key={id + index + title}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: id * 0.1 }}

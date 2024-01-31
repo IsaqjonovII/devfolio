@@ -1,7 +1,7 @@
 import { array } from "prop-types";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import { NavigateLink } from "components/Button";
 import "swiper/css";
 import "./style.css";
 import "swiper/css/pagination";
@@ -25,7 +25,7 @@ const CustomSwiper = ({ data }) => {
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      {data.map(({ id, title, images, subtitle, key }) => {
+      {data.map(({ id, title, images, subtitle, key, link }) => {
         const imageUri =
           window.innerWidth > 768 ? images[0] : images[images.length - 1];
         return (
@@ -40,11 +40,14 @@ const CustomSwiper = ({ data }) => {
                 <div className="swiper__content">
                   <h1 className="swiper__title">{title}</h1>
                   <h2 className="swiper__subtitle">{subtitle}</h2>
-                  <NavigateLink
+                  <Link
                     className="text-center"
-                    text="Learn more"
-                    link={`/mywork/${key}`}
-                  />
+                    to={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn more
+                  </Link>
                 </div>
               </div>
             </div>

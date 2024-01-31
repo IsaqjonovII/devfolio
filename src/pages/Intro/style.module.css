@@ -94,7 +94,7 @@
   .text__wrp {
     padding: 0;
     margin: auto;
-    margin-top: calc(2.5rem + 3vh);
+    /* margin-top: calc(2.5rem + 3vh); */
   }
   .me {
     text-align: center;

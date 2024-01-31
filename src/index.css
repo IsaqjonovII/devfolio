@@ -30,8 +30,8 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  scroll-padding-top: 12rem;
-  scroll-padding-block-start: 10rem;
+  scroll-padding-top: 3rem;
+  scroll-padding-block-start: 3rem;
   text-rendering: optimizeLegibility;
 }
 .dark,
@@ -51,6 +51,26 @@ body {
   --primary-bg: var(--light-bg);
   --second-bg: var(--light-btn-1);
   --second-bg-tr: var(--light-btn-tr);
+}
+.loader {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: var(--primary-bg);
+  text-align: center;
+  & h1 {
+    font-size: var(--font-h3);
+    color: var(--primary-green);
+  }
+  & h2 {
+    color: var(--primary-green);
+    font-size: var(--font-h4);
+  }
 }
 .page__title {
   font-size: var(--font-h2-display);

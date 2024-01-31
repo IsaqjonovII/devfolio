@@ -30,6 +30,3 @@ User-agent: psbot
 Disallow: 
 User-agent: yahoo-blogs/v3.9
 Disallow: 
-User-agent: *
-Disallow: 
-Sitemap: https://ilhomjon.dev/sitemap.xml

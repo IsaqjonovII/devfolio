@@ -7,6 +7,7 @@ import Navbar from "components/Navbar";
 import { routes } from "routes";
 import Contact from "pages/Contact";
 const MyWork = lazy(() => import("pages/Work"));
+import Home from "pages/Home";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -49,12 +50,11 @@ const App = () => {
         </AnimatePresence>
       </header>
       <AnimatePresence>
-        {routes.map(({ id, Component }) => (
-          <Component key={id} />
-        ))}
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/mywork/:key" element={<MyWork />} />
         </Routes>
+        {routes.map(({ id, Component }) => Component && <Component key={id} />)}
       </AnimatePresence>
     </div>
   );

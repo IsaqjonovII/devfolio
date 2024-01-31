@@ -8,14 +8,16 @@ export const HoverCards = () => {
   const [mousePositions, setMousePositions] = useState({});
 
   const getMousePosition = (id, { clientY, clientX }) => {
-    const { top, left } = document.getElementById(id).getBoundingClientRect();
-    setMousePositions((prevState) => ({
-      ...prevState,
-      [id]: {
-        y: `${clientY - top}px`,
-        x: `${clientX - left}px`,
-      },
-    }));
+    if (window.innerWidth > 768) {
+      const { top, left } = document.getElementById(id).getBoundingClientRect();
+      setMousePositions((prevState) => ({
+        ...prevState,
+        [id]: {
+          y: `${clientY - top}px`,
+          x: `${clientX - left}px`,
+        },
+      }));
+    }
   };
   return (
     <div className="cards__wrp container">

@@ -84,4 +84,7 @@
     grid-template-columns: 1fr;
     max-width: 35rem;
   }
+  .card::after {
+    display: none;
+  }
 }

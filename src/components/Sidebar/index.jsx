@@ -1,6 +1,5 @@
 import { routes } from "routes";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { bool, func } from "prop-types";
 import c from "./style.module.css";
 import { myResume } from "assets";
@@ -45,9 +44,9 @@ const Sidebar = ({
             variants={itemVariants}
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           >
-            <Link
+            <a
               className={c.sidebar__link}
-              to={path}
+              href={path}
               onClick={(e) => {
                 e.preventDefault();
                 const targetElement = document.getElementById(key);
@@ -57,7 +56,7 @@ const Sidebar = ({
               }}
             >
               {title}
-            </Link>
+            </a>
           </motion.li>
         ))}
         <motion.li
@@ -80,4 +79,6 @@ export default Sidebar;
 Sidebar.propTypes = {
   isSidebarOpen: bool.isRequired,
   setIsSidebarOpen: func.isRequired,
+  isContacted: bool,
+  setIsContacted: func,
 };

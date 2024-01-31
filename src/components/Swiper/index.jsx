@@ -1,5 +1,4 @@
 import { array } from "prop-types";
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -25,7 +24,7 @@ const CustomSwiper = ({ data }) => {
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      {data.map(({ id, title, images, subtitle, key, link }) => {
+      {data.map(({ id, title, images, subtitle, link }) => {
         const imageUri =
           window.innerWidth > 768 ? images[0] : images[images.length - 1];
         return (
@@ -40,14 +39,14 @@ const CustomSwiper = ({ data }) => {
                 <div className="swiper__content">
                   <h1 className="swiper__title">{title}</h1>
                   <h2 className="swiper__subtitle">{subtitle}</h2>
-                  <Link
+                  <a
                     className="text-center"
-                    to={link}
+                    href={link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Learn more
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

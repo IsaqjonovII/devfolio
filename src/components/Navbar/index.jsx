@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { bool, func, string } from "prop-types";
-import { Link, NavLink } from "react-router-dom";
 import { routes } from "routes";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
@@ -19,7 +18,7 @@ const Navbar = ({
   };
   return (
     <div className={`${c.header} flex`}>
-      <Link to="/">
+      <a href="/">
         <motion.div
           className={c.nav__logo}
           initial={{ opacity: 0 }}
@@ -27,7 +26,7 @@ const Navbar = ({
         >
           <Logo className={c.my__logo} />
         </motion.div>
-      </Link>
+      </a>
       <nav className="flex">
         <ul className={`${c.nav__menu} flex`}>
           {routes.map(({ id, path, title, key }, index) => (
@@ -37,9 +36,9 @@ const Navbar = ({
               animate={{ opacity: 1 }}
               transition={{ delay: id * 0.1 }}
             >
-              <Link
+              <a
                 className={c.menu__link}
-                to={path}
+                href={path}
                 onClick={(e) => {
                   e.preventDefault();
                   const targetElement = document.getElementById(key);
@@ -49,7 +48,7 @@ const Navbar = ({
                 }}
               >
                 <span>{id}. </span> {title}
-              </Link>
+              </a>
             </motion.li>
           ))}
           <motion.li
@@ -95,5 +94,7 @@ Navbar.propTypes = {
   setIsSidebarOpen: func.isRequired,
   theme: string.isRequired,
   setTheme: func.isRequired,
+  isContacted: bool,
+  setIsContacted: func,
 };
 export default Navbar;

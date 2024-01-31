@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./style.css";
 import { sideProjectsData } from "static";
@@ -42,18 +41,20 @@ export const HoverCards = () => {
             <div className="card__head flex">
               <h1 className="card__title">{title}</h1>
               <div className="flex">
-                <Link
-                  to={repoLink}
+                <a
+                  href={repoLink}
                   target={link.includes("/portfolio") ? "_self" : "_blank"}
+                  rel="noreferrer"
                 >
                   <Github className="icon" />
-                </Link>
-                <Link
-                  to={link}
+                </a>
+                <a
+                  href={link}
                   target={link.includes("/portfolio") ? "_self" : "_blank"}
+                  rel="noreferrer"
                 >
                   <LinkIcon className="icon" />
-                </Link>
+                </a>
               </div>
             </div>
             <p className="card__info">{info}</p>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { coder } from "assets";
 import c from "./style.module.css";
 import { introData, socialLinks } from "static";
@@ -19,16 +18,16 @@ const Intro = () => {
 
             <div className={c.social__links}>
               {socialLinks.map(({ key, link, Icon, label }) => (
-                <Link
+                <a
                   key={key}
-                  to={link}
+                  href={link}
                   rel="noopener noreferrer"
                   target="_blank"
                   className={c.social__link}
                 >
                   <Icon className={c.social__icon} />
                   <span className={c.link__text}>{label}</span>
-                </Link>
+                </a>
               ))}
             </div>
           </section>

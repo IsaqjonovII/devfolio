@@ -1,6 +1,5 @@
 import { Github, Instagram, Linkedin, X } from "assets";
 import c from "pages/Intro/style.module.css";
-import { Link } from "react-router-dom";
 export const framerVariants = {
   closed: {
     transition: {
@@ -45,13 +44,13 @@ export const introData = [
       <>
         <p className={c.intro__text}>
           These days, I&apos;m dedicated to working on my side project,{" "}
-          <Link
-            to="https://motoshop.uz"
+          <a
+            href="https://motoshop.uz"
             rel="noreferrer noopener"
             target="_blank"
           >
             motoshop.uz
-          </Link>{" "}
+          </a>{" "}
           it&apos;s a platform where people can buy or sell their bikes.
           Additionally, I&apos;m involved in guiding and inspiring aspiring
           developers in a dynamic learning environment, with a focus on HTML,
@@ -135,7 +134,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Motoshop",
-    info: "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
+    info:
+      "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
     tags: [
       "react",
       "antd",
@@ -152,7 +152,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Twitter",
-    info: "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
+    info:
+      "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
     tags: [
       "react",
       "redux-toolkit",
@@ -169,7 +170,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Certificate generator",
-    info: "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
+    info:
+      "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
     tags: ["react", "pdf-lib"],
     link: "/portfolio",
     repoLink: "/portfolio",
@@ -177,7 +179,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Free Images. Pexels",
-    info: "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
+    info:
+      "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
     tags: ["react", "pexels-api", "axios"],
     link: "https://pexels-teal.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/pexels",
@@ -185,7 +188,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Avtoqulay",
-    info: "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
+    info:
+      "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
     tags: [
       "react",
       "axios",
@@ -200,7 +204,8 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Hogan",
-    info: "Built as a shoe e-commerce clone website, this project harnesses React, Firebase, and Redux Toolkit. React shapes the UI, Firebase handles data and authentication, and Redux Toolkit manages state.",
+    info:
+      "Built as a shoe e-commerce clone website, this project harnesses React, Firebase, and Redux Toolkit. React shapes the UI, Firebase handles data and authentication, and Redux Toolkit manages state.",
     tags: ["react", "firebase", "reduxt-toolkit", "vercel"],
     link: "https://hogan-rebel.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/Hogan",
@@ -278,11 +283,15 @@ export const msgData = {
   ],
   partnerReply: [
     "Ok, Let's chat further",
-    <Link to="mailto:isaqjonoviii@gmail.com?subject=Hi">Send message</Link>,
+    <a key="mail" href="mailto:isaqjonoviii@gmail.com?subject=Hi">
+      Send message
+    </a>,
   ],
   hiring: [
     "Oh nice",
     "Let's discuss it",
-    <Link to="mailto:isaqjonoviii@gmail.com?subject=Hi">Send message</Link>,
+    <a key="mails" href="mailto:isaqjonoviii@gmail.com?subject=Hi">
+      Send message
+    </a>,
   ],
 };

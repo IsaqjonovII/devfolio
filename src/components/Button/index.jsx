@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { node, string } from "prop-types";
 import { ArrowRight } from "assets";
 import "./style.css";
@@ -17,8 +16,8 @@ export const NavigateLink = ({ text, link, className }) => {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
-    <Link
-      to={link}
+    <a
+      href={link}
       onClick={(e) => {
         e.preventDefault();
         const targetElement = document.getElementById(link);
@@ -32,7 +31,7 @@ export const NavigateLink = ({ text, link, className }) => {
       <div className="arrow__wrp">
         <ArrowRight className="arrow__icon" />
       </div>
-    </Link>
+    </a>
   );
 };
 

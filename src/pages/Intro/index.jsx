@@ -40,7 +40,7 @@ const Intro = () => {
               </div>
             ))}
             <div className="navigate__link">
-              <NavigateLink link="/portfolio" text="Explore my portfolio" />
+              <NavigateLink link="portfolio" text="Explore my portfolio" />
             </div>
           </section>
         </div>

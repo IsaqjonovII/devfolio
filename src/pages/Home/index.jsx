@@ -40,7 +40,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.48 }}
         >
-          <NavigateLink text="About me" link="/about-me" />
+          <NavigateLink text="About me" link="intro" />
         </motion.div>
       </div>
     </main>

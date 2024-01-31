@@ -13,8 +13,21 @@ const CustomBtn = ({ children, className }) => {
 export default CustomBtn;
 
 export const NavigateLink = ({ text, link, className }) => {
+  const handleScroll = (el) => {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
-    <Link to={link} className={"link flex " + className}>
+    <Link
+      to={link}
+      onClick={(e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(link);
+        if (targetElement) {
+          handleScroll(targetElement);
+        }
+      }}
+      className={"link flex " + className}
+    >
       {text}
       <div className="arrow__wrp">
         <ArrowRight className="arrow__icon" />

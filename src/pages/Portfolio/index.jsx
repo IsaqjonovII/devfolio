@@ -14,7 +14,7 @@ const MyWork = () => {
           <CustomSwiper data={recentProjects} />
         </section>
         <section className={c.container}>
-          <h1 className={c.section__title}>Other remarkable projects</h1>
+          <h1 className={c.section__title}>Other noteworthy projects</h1>
           <HoverCards />
         </section>
       </div>

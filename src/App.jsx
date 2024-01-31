@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Sidebar from "components/Sidebar";
-import Navbar from "components/Navbar";
 import { routes } from "routes";
 import Contact from "pages/Contact";
+import Navbar from "components/Navbar";
+import Sidebar from "components/Sidebar";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -17,7 +17,7 @@ const App = () => {
     document.body.className = theme;
   }, [theme]);
   return (
-    <div className={"app"}>
+    <div className="app">
       <header className="header__container">
         <Navbar
           theme={theme}

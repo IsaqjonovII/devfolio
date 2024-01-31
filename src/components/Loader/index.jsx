@@ -3,7 +3,7 @@ const Loader = () => {
     <div className="loader">
       <div>
         <h1>Wait a little bit</h1>
-        <h2>I'm thinking</h2>
+        <h2>I&apos;m thinking</h2>
       </div>
     </div>
   );

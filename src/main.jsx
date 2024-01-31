@@ -1,6 +1,5 @@
 import { Suspense, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import Loader from "components/Loader";
@@ -15,9 +14,7 @@ console.log(
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Suspense fallback={<Loader />}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <App />
     </Suspense>
   </StrictMode>
 );

@@ -11,6 +11,17 @@
   line-height: 1;
   margin-bottom: calc(1rem + 1vh);
 }
+.menu__btn {
+  font-family: var(--font);
+  font-size: var(--font-mini);
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  background: var(--second-bg);
+  border: 1px solid transparent;
+  border-radius: 0.425rem;
+  cursor: pointer;
+  color: var(--primary-text);
+}
 .title__label {
   font-size: var(--font-h1);
   display: inline-block;
@@ -61,6 +72,10 @@
   .main {
     padding: 0 20px;
     text-align: center;
+    & a {
+      display: block;
+      margin: auto;
+    }
   }
   .title__label {
     background: linear-gradient(
@@ -75,6 +90,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 1.5s linear infinite;
+  }
+  .menu__btn {
+    margin: auto;
+    display: block;
   }
 }
 @media only screen and (max-width: 550px) {

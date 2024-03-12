@@ -154,3 +154,8 @@ h3 {
   color: var(--primary-green);
   text-shadow: 0 2px 0px var(--dark-bg), 0 3px 0px var(--dark-bg);
 }
+
+:where(input, textarea, button)::selection {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}

@@ -2,15 +2,9 @@ import { routes } from "routes";
 import { motion } from "framer-motion";
 import { bool, func } from "prop-types";
 import c from "./style.module.css";
-import { myResume } from "assets";
 import { framerVariants, itemVariants } from "static";
 
-const Sidebar = ({
-  isSidebarOpen,
-  setIsSidebarOpen,
-  setIsContacted,
-  isContacted,
-}) => {
+const Sidebar = ({isSidebarOpen,setIsSidebarOpen}) => {
   const handleScroll = (el) => {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -59,18 +53,6 @@ const Sidebar = ({
             </a>
           </motion.li>
         ))}
-        <motion.li
-          variants={itemVariants}
-          className={c.sidebar__link}
-          onClick={() => setIsContacted(!isContacted)}
-        >
-          Contact
-        </motion.li>
-        <motion.li variants={itemVariants}>
-          <a href={myResume} download={true}>
-            <button className={c.menu__btn}>Resume / CV</button>
-          </a>
-        </motion.li>
       </motion.ul>
     </motion.aside>
   );
@@ -79,6 +61,4 @@ export default Sidebar;
 Sidebar.propTypes = {
   isSidebarOpen: bool.isRequired,
   setIsSidebarOpen: func.isRequired,
-  isContacted: bool,
-  setIsContacted: func,
 };

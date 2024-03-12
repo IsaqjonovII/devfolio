@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import c from "./style.module.css";
-import { NavigateLink } from "components/Button";
+import { myResume } from "assets";
 
 const Home = () => {
   return (
@@ -35,12 +35,15 @@ const Home = () => {
           this journey with you
         </motion.p>
         <motion.div
+          className="flex"
           style={{ marginTop: 15 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.48 }}
         >
-          <NavigateLink text="About me" link="intro" />
+          <a href={myResume} download={true}>
+            <button className={c.menu__btn}>Resume / CV</button>
+          </a>
         </motion.div>
       </div>
     </main>

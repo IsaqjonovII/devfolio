@@ -3,16 +3,9 @@ import { bool, func, string } from "prop-types";
 import { routes } from "routes";
 import c from "./style.module.css";
 import BarsIcon from "components/BarsIcon";
-import { DarkBulb, LightBulb, Logo } from "assets";
+import { DarkBulb, LightBulb, Logo} from "assets";
 
-const Navbar = ({
-  isSidebarOpen,
-  setIsSidebarOpen,
-  theme,
-  setTheme,
-  isContacted,
-  setIsContacted,
-}) => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
   const handleScroll = (el) => {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -51,22 +44,6 @@ const Navbar = ({
               </a>
             </motion.li>
           ))}
-          <motion.li
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <p
-              onClick={() => setIsContacted(!isContacted)}
-              className={
-                isContacted
-                  ? `${c.menu__link} ${c.contact__active}`
-                  : c.menu__link
-              }
-            >
-              <span>3. </span> Contact
-            </p>
-          </motion.li>
         </ul>
         <motion.div
           className={c.theme__switcher}
@@ -94,7 +71,5 @@ Navbar.propTypes = {
   setIsSidebarOpen: func.isRequired,
   theme: string.isRequired,
   setTheme: func.isRequired,
-  isContacted: bool,
-  setIsContacted: func,
 };
 export default Navbar;

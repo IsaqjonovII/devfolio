@@ -17,6 +17,9 @@ const App = () => {
 
   return (
     <div className="app">
+      <div className="alert">
+        <article>Ceasefire In Gaza NOW!</article>
+      </div>
       <header className="header__container">
         <Navbar
           theme={theme}
@@ -34,6 +37,12 @@ const App = () => {
         </AnimatePresence>
       </header>
       {routes.map(({ id, Component }) => Component && <Component key={id} />)}
+
+      <footer>
+        <p className="footer__copyright">
+          Designed and Built with ❤️ by Ilhomjon
+        </p>
+      </footer>
     </div>
   );
 };

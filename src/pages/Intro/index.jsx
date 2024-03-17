@@ -12,7 +12,7 @@ const Intro = () => {
         </section>
         <div className={c.section__wrp + " flex"}>
           <section className={c.me}>
-            <div className={c.img__wrp}>
+            <div>
               <img className={c.intro__img} src={coder} alt="" />
             </div>
 

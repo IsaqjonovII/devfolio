@@ -29,10 +29,10 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          I&apos;ve been working as a frontend developer for over 2 years.
-          During this time, I&apos;ve had the privilege of contributing to
-          impactful projects where I honed my skills in TypeScript, Javascript,
-          React, Nodejs and Fastify.
+          I&apos;ve been working as a frontend developer for over 2 years. During
+          this time, I&apos;ve had the privilege of contributing to impactful
+          projects where I honed my skills in TypeScript, Javascript, React,
+          Nodejs and Fastify.
         </p>
       </>
     ),
@@ -134,8 +134,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Motoshop",
-    info:
-      "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
+    info: "MOTOSHOP: Marketplace for motorcycle enthusiasts. Find your dream ride or sell your trusted companion.",
     tags: [
       "react",
       "antd",
@@ -152,8 +151,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Twitter",
-    info:
-      "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
+    info: "Social media platform: tweeting, liking, replying. Easy account creation, secure login.",
     tags: [
       "react",
       "redux-toolkit",
@@ -170,8 +168,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Certificate generator",
-    info:
-      "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
+    info: "Tool for certificate creation. Upload, position text, merge PDFs. Professional certificates quickly.",
     tags: ["react", "pdf-lib"],
     link: "",
     repoLink: "",
@@ -179,8 +176,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Free Images. Pexels",
-    info:
-      "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
+    info: "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
     tags: ["react", "pexels-api", "axios"],
     link: "https://pexels-teal.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/pexels",
@@ -188,8 +184,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Avtoqulay",
-    info:
-      "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
+    info: "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
     tags: [
       "react",
       "axios",
@@ -204,8 +199,7 @@ export const sideProjectsData = [
   {
     id: id++,
     title: "Hogan",
-    info:
-      "Built as a shoe e-commerce clone website, this project harnesses React, Firebase, and Redux Toolkit. React shapes the UI, Firebase handles data and authentication, and Redux Toolkit manages state.",
+    info: "Built as a shoe e-commerce clone website, this project harnesses React, Firebase, and Redux Toolkit. React shapes the UI, Firebase handles data and authentication, and Redux Toolkit manages state.",
     tags: ["react", "firebase", "reduxt-toolkit", "vercel"],
     link: "https://hogan-rebel.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/Hogan",
@@ -234,7 +228,7 @@ export const recentProjects = [
     link: "https://itc-nurafshon.uz/",
     images: [
       "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/ehaewq9z9iez02mseld2.png",
-    "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/jgk58rfloduer01yxlwu.png",
+      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/jgk58rfloduer01yxlwu.png",
     ],
   },
   {

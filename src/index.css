@@ -134,10 +134,28 @@ h3 {
   left: 0;
   z-index: 999;
 }
+footer {
+  padding: 50px;
+}
 .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.alert {
+  font-size: var(--font-body);
+  font-family: var(--font);
+  background-color: var(--second-bg);
+  text-align: center;
+  padding: 6px 30px;
+  color: var(--primary-text);
+}
+.footer__copyright {
+  text-align: center;
+  color: var(--primary-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-mini);
+  margin-bottom: -20px;
 }
 ::-webkit-scrollbar {
   width: 10px;

@@ -13,7 +13,6 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, theme, setTheme }) => {
     <div className={`${c.header} flex`}>
       <a href="/">
         <motion.div
-          className={c.nav__logo}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >

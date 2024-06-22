@@ -31,8 +31,7 @@ export const introData = [
         <p className={c.intro__text}>
           I&apos;ve been working as a frontend developer for over 2 years. During
           this time, I&apos;ve had the privilege of contributing to impactful
-          projects where I honed my skills in TypeScript, Javascript, React,
-          Nodejs and Fastify.
+          projects where I honed my skills in web development.
         </p>
       </>
     ),
@@ -50,8 +49,7 @@ export const introData = [
             target="_blank"
           >
             motoshop.uz
-          </a>{" "}
-          it&apos;s a platform where people can buy or sell their bikes.
+          </a>. It&apos;s a platform where people can buy or sell their bikes.
           Additionally, I&apos;m involved in guiding and inspiring aspiring
           developers in a dynamic learning environment, with a focus on HTML,
           CSS, and JavaScript.
@@ -61,14 +59,15 @@ export const introData = [
   },
   {
     id: 3,
-    title: "Passion and Motivation",
+    title: "Tech Stack",
     content: (
       <>
         <p className={c.intro__text}>
-          I take pleasure in transforming intricate challenges into elegant
-          solutions through code. My interest in web development arises from a
-          goal to design not only visually appealing websites but also ensure a
-          smooth user experience.
+          My tech stack includes JavaScript, TypeScript, React.js, Vue 3, Nuxt 3,
+          Redux Toolkit, Redux, RTK Query, Git, and CDNs like Cloudinary.
+          I also have some experience with backend technologies such as Node.js,
+          Fastify, Express, and MongoDB. I leverage these technologies to build
+          robust and scalable web applications.
         </p>
       </>
     ),
@@ -80,26 +79,13 @@ export const introData = [
       <>
         <p className={c.intro__text}>
           In the future, I aim to enhance my proficiency in frontend development
-          and explore other IT domains like AI, Cybersecurity, and Mobile
+          and explore other IT domains like AI, cybersecurity, and mobile
           development. I am dedicated to staying updated on industry trends and
           consistently improving my skills.
         </p>
       </>
     ),
-  },
-  {
-    id: 5,
-    title: "Fun Fact",
-    content: (
-      <>
-        <p className={c.intro__text}>
-          Beyond coding, I find joy in the roar of a motorbike and the thrill of
-          travel. Join me as I navigate both the digital and physical landscapes
-          with equal enthusiasm!
-        </p>
-      </>
-    ),
-  },
+  }
 ];
 
 export const socialLinks = [

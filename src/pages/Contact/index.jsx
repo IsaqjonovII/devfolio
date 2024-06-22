@@ -117,7 +117,7 @@ const Contact = () => {
               </div>
             </div>
             <div className={c.form__inputGroup}>
-              <label htmlFor="message">Say anything you wanna say to me:</label>
+              <label htmlFor="message">Your message:</label>
               <textarea
                 className={c.form__textarea}
                 name="msg"

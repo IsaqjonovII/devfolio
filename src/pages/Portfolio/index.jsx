@@ -1,22 +1,18 @@
-import { HoverCards } from "components/HoverCards";
+import { HoverCard } from "components/HoverCard";
+import { sideProjectsData } from "static";
+
 import c from "./style.module.css";
-import CustomSwiper from "components/Swiper";
-import { recentProjects } from "static";
 
 const MyWork = () => {
   return (
-    <main className={c.portfolio} id="portfolio">
-      <div className="container">
+    <main className={c.portfolio} id='portfolio'>
+      <div className='container'>
         <h1 className={c.page__title}>Projects I have built</h1>
-
-        <section>
-          <h1 className={c.section__title}>My recent work</h1>
-          <CustomSwiper data={recentProjects} />
-        </section>
-        <section className={c.container}>
-          <h1 className={c.section__title}>Other noteworthy projects</h1>
-          <HoverCards />
-        </section>
+        <div className='cards__wrp container'>
+          {sideProjectsData.map((project, idx) => (
+            <HoverCard {...project} id={idx} key={idx} />
+          ))}
+        </div>
       </div>
     </main>
   );

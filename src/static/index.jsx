@@ -29,9 +29,10 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          I&apos;ve been working as a frontend developer for over 2 years. During
-          this time, I&apos;ve had the privilege of contributing to impactful
-          projects where I honed my skills in web development.
+          I&apos;ve been working as a frontend developer for over 2 years.
+          During this time, I&apos;ve had the privilege of contributing to
+          impactful projects where I honed my skills in TypeScript, Javascript,
+          React, Vue, Nuxt, Nodejs and Fastify.
         </p>
       </>
     ),
@@ -42,17 +43,17 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          These days, I&apos;m dedicated to working on my side project,{" "}
+          These days, I'm dedicated to working on{" "}
           <a
-            href="https://motoshop.uz"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            motoshop.uz
-          </a>. It&apos;s a platform where people can buy or sell their bikes.
-          Additionally, I&apos;m involved in guiding and inspiring aspiring
-          developers in a dynamic learning environment, with a focus on HTML,
-          CSS, and JavaScript.
+            href='https://unicraft.uz'
+            rel='noopener noreferrer'
+            target='_blank'>
+            Unicraft.uz
+          </a>
+          , a platform designed to make college admissions accessible worldwide.
+          Unicraft serves as a bridge between successful college students and
+          applicants, providing the necessary tools and resources to simplify
+          the admissions process.
         </p>
       </>
     ),
@@ -63,9 +64,9 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          My tech stack includes JavaScript, TypeScript, React.js, Vue 3, Nuxt 3,
-          Redux Toolkit, Redux, RTK Query, Git, and CDNs like Cloudinary.
-          I also have some experience with backend technologies such as Node.js,
+          My tech stack includes JavaScript, TypeScript, React.js, Vue 3, Nuxt
+          3, Redux Toolkit, Redux, RTK Query, Git, and CDNs like Cloudinary. I
+          also have some experience with backend technologies such as Node.js,
           Fastify, Express, and MongoDB. I leverage these technologies to build
           robust and scalable web applications.
         </p>
@@ -85,7 +86,7 @@ export const introData = [
         </p>
       </>
     ),
-  }
+  },
 ];
 
 export const socialLinks = [
@@ -117,6 +118,14 @@ export const socialLinks = [
 
 let id = 0;
 export const sideProjectsData = [
+  {
+    id: id++,
+    title: "IT Center Nurafshon",
+    info: "Website for Nurafshon branch of IT Center",
+    link: "https://itc-nurafshon.uz/",
+    repoLink: "https://github.com/IsaqjonovII/ITC",
+    tags: ["react", "module css", "react-router"],
+  },
   {
     id: id++,
     title: "Motoshop",
@@ -161,14 +170,6 @@ export const sideProjectsData = [
   },
   {
     id: id++,
-    title: "Free Images. Pexels",
-    info: "Endless free images. Download limitlessly. Simplify visual search, enhance creativity.",
-    tags: ["react", "pexels-api", "axios"],
-    link: "https://pexels-teal.vercel.app/",
-    repoLink: "https://github.com/IsaqjonovII/pexels",
-  },
-  {
-    id: id++,
     title: "Avtoqulay",
     info: "Winner hackathon. Locate fuel stations, filter prices. Comprehensive marketplace for car-related items.",
     tags: [
@@ -189,44 +190,5 @@ export const sideProjectsData = [
     tags: ["react", "firebase", "reduxt-toolkit", "vercel"],
     link: "https://hogan-rebel.vercel.app/",
     repoLink: "https://github.com/IsaqjonovII/Hogan",
-  },
-];
-id = 0;
-export const recentProjects = [
-  {
-    id: id++,
-    key: "bismillah-travel",
-    title: "Bismillah-Travel",
-    content: "",
-    subtitle: "Tour company landing page website",
-    link: "https://bismillah-travel.uz/",
-    images: [
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228375/mtynkjsl3iaogjbenzuj.png",
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/j8x9m7mfysv2tv6gn53i.png",
-    ],
-  },
-  {
-    id: id++,
-    key: "itc-nurafshon",
-    title: "IT Center Nurafshon",
-    content: "",
-    subtitle: "Website for Nurafshon branch of IT Center",
-    link: "https://itc-nurafshon.uz/",
-    images: [
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/ehaewq9z9iez02mseld2.png",
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/jgk58rfloduer01yxlwu.png",
-    ],
-  },
-  {
-    id: id++,
-    key: "itpark-tashkent",
-    title: "IT Park Tashkent Region",
-    content: "",
-    subtitle: "Website for Tashkent Region branch of IT Park",
-    link: "https://it-park-tau.vercel.app/",
-    images: [
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/zesg6gtbr5wfho6xno0v.png",
-      "https://res.cloudinary.com/doswy0zdn/image/upload/v1710228374/jcjsekbbpmtfbyhvl6pa.png",
-    ],
   },
 ];

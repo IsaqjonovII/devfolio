@@ -3,10 +3,10 @@
   --white: #e9efe6;
   --dark-bg: #1c292f;
   --dark-btn: #1f5e6b;
-  --light-bg: #dad3c1;
+  --light-bg: #f0f0f0;
   --light-text: #1d1b17;
-  --light-btn: #918b7d;
-  --light-btn-1: #c8c3b3;
+  --light-btn: #1d1b17;
+  --light-btn-1: #918b7d;
   --dark-btn-tr: #1f5e6b61;
   --light-btn-tr: #c8c3b390;
   --bg-overlay: #131b21d5;
@@ -46,11 +46,15 @@ body {
 .light,
 body {
   --overlay: var(--bg-light-overlay);
-  --primary-text: var(--light-text);
-  --primary-green: var(--light-btn);
+  --primary-text: var(--light);
+  --primary-green: var(--green);
   --primary-bg: var(--light-bg);
-  --second-bg: var(--light-btn-1);
+  --second-bg: var(--dark-btn);
   --second-bg-tr: var(--light-btn-tr);
+
+  & button {
+    color: var(--white);
+  }
 }
 .loader {
   display: grid;

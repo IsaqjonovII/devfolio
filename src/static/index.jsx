@@ -43,17 +43,14 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          These days, I'm dedicated to working on{" "}
+          These days, I&apos;m @ {" "}
           <a
-            href='https://unicraft.uz'
+            href='https://uic.group'
             rel='noopener noreferrer'
             target='_blank'>
-            Unicraft.uz
+           UIC Group 
           </a>
-          , a platform designed to make college admissions accessible worldwide.
-          Unicraft serves as a bridge between successful college students and
-          applicants, providing the necessary tools and resources to simplify
-          the admissions process.
+          , a company that is the address of projects that have their own values and do not pass without quality control.
         </p>
       </>
     ),
@@ -64,9 +61,8 @@ export const introData = [
     content: (
       <>
         <p className={c.intro__text}>
-          My tech stack includes JavaScript, TypeScript, React.js, Vue 3, Nuxt
-          3, Redux Toolkit, Redux, RTK Query, Git, and CDNs like Cloudinary. I
-          also have some experience with backend technologies such as Node.js,
+          My tech stack includes JavaScript, TypeScript, React.js, Vue , Nuxt, Next.js, Redux Toolkit, Pinia, Git, and so on.
+          Also have some experience with backend technologies such as Node.js,
           Fastify, Express, and MongoDB. I leverage these technologies to build
           robust and scalable web applications.
         </p>
@@ -80,7 +76,7 @@ export const introData = [
       <>
         <p className={c.intro__text}>
           In the future, I aim to enhance my proficiency in frontend development
-          and explore other IT domains like AI, cybersecurity, and mobile
+          and explore other IT domains like cybersecurity, and mobile
           development. I am dedicated to staying updated on industry trends and
           consistently improving my skills.
         </p>
@@ -140,7 +136,7 @@ export const sideProjectsData = [
       "redux",
       "rtk-query",
     ],
-    link: "https://motoshop.uz/",
+    link: "https://motoshopuz.netlify.app/",
     repoLink: "https://github.com/IsaqjonovII/motoshop",
   },
   {
